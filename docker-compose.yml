@@ -1,0 +1,42 @@
+# llama-server in router mode on the Radeon 780M (Vulkan). See README: How it works.
+# bin/dev runs this same file as project llm-dev, with the LLM_* variables set.
+name: llm
+
+services:
+  llm:
+    # Pinned to a llama.cpp build; bump the tag on purpose and test with bin/dev first
+    image: ghcr.io/ggml-org/llama.cpp:server-vulkan-b12602
+    container_name: ${LLM_CONTAINER:-llm}
+    restart: unless-stopped
+    # Leaves the other cores to the game servers. Generation runs on the iGPU.
+    cpus: "4"
+    devices:
+      - /dev/dri:/dev/dri
+    group_add:
+      - "993" # the host's render group, which owns /dev/dri/renderD128
+    ports:
+      - "127.0.0.1:${LLM_PORT:-8741}:8080" # localhost only, published via tailscale serve
+    volumes:
+      - ${LLM_MODELS:-./data/models}:/models:ro
+      - ${LLM_PRESET:-./models.ini}:/models.ini:ro
+    environment:
+      TZ: America/New_York
+    command:
+      - --models-preset
+      - /models.ini
+      # One model in memory at a time: asking for the other one swaps them
+      - --models-max
+      - "1"
+      # Unload a model after 15 minutes without requests (/health does not count)
+      - --sleep-idle-seconds
+      - "${LLM_SLEEP:-900}"
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "-o", "/dev/null", "http://localhost:8080/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 30s
+    logging:
+      options:
+        max-size: 10m
+        max-file: "3"

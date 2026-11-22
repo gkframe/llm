@@ -1,0 +1,87 @@
+#!/usr/bin/env bash
+# Download the model files in models.list that are missing, and verify them.
+# `deploy llm` runs it before every apply (pre_apply), as deploy, in /srv/llm.
+#
+#   bin/fetch-models          the "live" files, into data/models
+#   bin/fetch-models --dev    the "dev" files, into data-dev/models
+#
+# A file is present when its size matches and <dest>/.verified/<file> holds its sha256,
+# written after a full check, so a deploy doesn't re-hash 35 GB every time. A file of the
+# right size with no record (copied in by hand) is checked once. Downloads go to
+# <file>.part and resume after an interruption. Files no longer listed are left alone.
+# Exits 1 if any file could not be fetched or verified.
+set -euo pipefail
+cd "$(dirname "$(readlink -f "$0")")/.."
+
+want=live dest=data/models list=models.list
+while (( $# )); do
+  case $1 in
+    --dev) want=dev dest=data-dev/models ;;
+    --list) list=$2; shift ;;  # for tests
+    --dest) dest=$2; shift ;;  # for tests
+    *) sed -n '2,12p' "$0" | sed 's/^# \{0,1\}//'; exit 2 ;;
+  esac
+  shift
+done
+
+say() { echo "fetch-models: $*"; }
+size() { stat -c %s "$1" 2>/dev/null || echo 0; }
+sha() { sha256sum "$1" | cut -c1-64; }
+
+mkdir -p "$dest/.verified"
+failed=0
+exec 3<"$list"
+while read -r set file bytes sum url <&3; do
+  [[ -n ${set:-} && $set != \#* && $set == "$want" ]] || continue
+  path=$dest/$file mark=$dest/.verified/$file
+
+  if [[ $(size "$path") == "$bytes" ]]; then
+    if [[ -f $mark && $(<"$mark") == "$sum" ]]; then
+      say "$file present"
+      continue
+    fi
+    say "$file checking its checksum"
+    if [[ $(sha "$path") == "$sum" ]]; then
+      echo "$sum" >"$mark"
+      say "$file verified"
+      continue
+    fi
+    say "$file has the wrong checksum, downloading it again"
+  fi
+  rm -f "$path" "$mark"
+
+  have=$(size "$path.part")
+  if (( have > bytes )); then rm -f "$path.part"; have=0; fi
+  need=$(( bytes - have + 1024**3 ))
+  free=$(df --output=avail -B1 "$dest" | tail -1)
+  if (( free < need )); then
+    say "$file needs $(( need / 1024**3 )) GiB free in $dest, only $(( free / 1024**3 )) GiB left" >&2
+    failed=1
+    continue
+  fi
+
+  if (( have < bytes )); then
+    say "$file downloading $(( bytes / 1024**2 )) MiB$( (( have )) && echo ", resuming at $(( have / 1024**2 )) MiB")"
+    if ! curl -fsSL --retry 5 --retry-delay 10 -C - -o "$path.part" "$url"; then
+      say "$file download failed (the partial file is kept; the next run resumes it)" >&2
+      failed=1
+      continue
+    fi
+  fi
+  if [[ $(size "$path.part") != "$bytes" ]]; then
+    say "$file downloaded $(size "$path.part") bytes, expected $bytes; deleted" >&2
+    rm -f "$path.part"
+    failed=1
+    continue
+  fi
+  if [[ $(sha "$path.part") != "$sum" ]]; then
+    say "$file has the wrong checksum after download; deleted" >&2
+    rm -f "$path.part"
+    failed=1
+    continue
+  fi
+  mv "$path.part" "$path"
+  echo "$sum" >"$mark"
+  say "$file downloaded and verified"
+done
+exit $failed

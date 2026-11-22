@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+# A dev instance of llama-server beside the live one, for trying a change to the compose
+# file or the image before `deploy llm`. Run it from the working copy, never from /srv/llm.
+# It is project llm-dev on 127.0.0.1:8841 with the small model of models-dev.ini, kept in
+# data-dev/models, so it never loads a second large model next to the live one.
+#
+#   bin/dev up        fetch the dev model if missing, then start it
+#   bin/dev down      stop it
+#   bin/dev ps        what is running
+#   bin/dev logs      its logs (add -f to follow)
+#   bin/dev compose <args>   any other docker compose command against the dev instance
+set -euo pipefail
+cd "$(dirname "$(readlink -f "$0")")/.."
+[[ $PWD != /srv/* ]] || { echo "bin/dev runs in the working copy, not in /srv" >&2; exit 1; }
+
+compose() {
+  LLM_CONTAINER=llm-dev LLM_PORT=8841 LLM_MODELS=./data-dev/models LLM_PRESET=./models-dev.ini \
+    LLM_SLEEP="${LLM_SLEEP:-300}" docker compose -p llm-dev "$@"
+}
+
+case ${1:-} in
+  up)
+    bin/fetch-models --dev
+    compose up -d
+    echo "llm-dev is up: http://127.0.0.1:8841 (model qwen3.5-0.8b)"
+    ;;
+  down)    compose down ;;
+  ps)      compose ps ;;
+  logs)    shift; compose logs "$@" ;;
+  compose) shift; compose "$@" ;;
+  *) sed -n '2,12p' "$0" | sed 's/^# \{0,1\}//'; exit 2 ;;
+esac

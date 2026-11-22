@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Run the tests. Needs only bash, python3, curl and sha256sum; no network, Docker or sudo.
+set -euo pipefail
+cd "$(dirname "$(readlink -f "$0")")/.."
+for f in bin/*; do
+  head -1 "$f" | grep -q bash && bash -n "$f"
+done
+python3 -m unittest discover -s tests
+rm -rf tests/__pycache__
+echo "ok"

@@ -1,0 +1,14 @@
+# Model files (data/models) and the dev instance's (data-dev/models): fetched, never committed
+data/
+data-dev/
+
+# Credentials: never commit (there are none today)
+secrets/
+.env
+
+__pycache__/
+*.pyc
+
+# Personal Claude Code overrides
+.claude/settings.local.json
+.claude/worktrees/
