@@ -43,10 +43,7 @@ class ModelsList(unittest.TestCase):
                 self.assertRegex(size, r"^[1-9][0-9]*$")
                 self.assertRegex(digest, r"^[0-9a-f]{64}$")
                 self.assertTrue(url.startswith("https://"), url)
-                # The saved name may differ from the URL's, e.g. when two repos publish the
-                # same file name (Qwen3.6 with and without MTP)
-                self.assertTrue(name.endswith(".gguf") and "/" not in name, name)
-                self.assertTrue(url.endswith(".gguf"), "url must name a .gguf file")
+                self.assertTrue(url.endswith("/" + name), "url must end with the file name")
                 self.assertNotIn("/resolve/main/", url, "pin a commit, not main")
                 self.assertNotIn((kind, name), names, "listed twice")
                 names.add((kind, name))
