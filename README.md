@@ -39,6 +39,7 @@ script.
 | Name (the API's `model`) | File | Size | Speed on Minerva |
 | --- | --- | --- | --- |
 | `qwen3.6-35b-a3b` | Qwen3.6 35B-A3B, unsloth UD-Q4_K_M | 20.6 GiB | 465 tok/s reading, 23.7 tok/s writing (llama-bench); through the server 22.7 tok/s, or 17 tok/s each with two requests at once; 12.8 s for a cold request from the page cache; ~23 GB of iGPU memory loaded (2026-11-21) |
+| `qwen3.6-35b-a3b-mtp` | The same model with its multi-token prediction (MTP) head, unsloth UD-Q4_K_M; drafts 2 tokens per step (`spec-type = draft-mtp`) | 21.1 GiB | On trial since 2026-11-22: being benchmarked against `qwen3.6-35b-a3b`, then kept in its place or removed |
 | `gemma-4-26b-a4b` | Gemma 4 26B-A4B-it, Google's QAT Q4_0 | 13.4 GiB | 27.1 tok/s writing through the server; 6 s for a cold request (2026-11-21) |
 
 Both are mixture-of-experts models: large in total, but only 3–4B parameters work on each
@@ -74,7 +75,6 @@ and benchmark it against Qwen3.6 (Operations: Benchmark a model).
 
 | Candidate | Why | Trade-off |
 | --- | --- | --- |
-| Qwen3.6 35B-A3B, MTP variant (`unsloth/Qwen3.6-35B-A3B-MTP-GGUF`) | The same model with multi-token prediction, which can speed up writing | Speed-up unmeasured; check that the pinned llama.cpp build uses MTP |
 | Qwen3.6 35B-A3B at UD-Q5_K_M (24.6 GiB) | Slightly better answers than Q4_K_M | About 15% slower, less memory headroom |
 | Qwen3.8 27B (dense, ~17 GB at Q4) | Called the strongest open model of its size in several roundups | About 4 tok/s here (dense models are bound by memory speed): batch jobs, not chat |
 | Recursive Flint 40B-A2.5B (MoE, ~23 GB) | Vendor reports 74.2% SWE-bench Verified; 2.5B active parameters, so it should be fast | No independent evaluation yet |
