@@ -66,6 +66,29 @@ request with `"chat_template_kwargs": {"enable_thinking": false}`.
    (`pre_apply = bin/fetch-models`), which can take half an hour. If the download or the
    checksum fails, nothing changes.
 
+### Candidates not yet added
+
+Researched 2026-11-21 and left for later by the user's choice. Figures are vendor-reported
+or from third-party roundups, not measured here. Re-check what is current before adding one,
+and benchmark it against Qwen3.6 (Operations: Benchmark a model).
+
+| Candidate | Why | Trade-off |
+| --- | --- | --- |
+| Qwen3.6 35B-A3B, MTP variant (`unsloth/Qwen3.6-35B-A3B-MTP-GGUF`) | The same model with multi-token prediction, which can speed up writing | Speed-up unmeasured; check that the pinned llama.cpp build uses MTP |
+| Qwen3.6 35B-A3B at UD-Q5_K_M (24.6 GiB) | Slightly better answers than Q4_K_M | About 15% slower, less memory headroom |
+| Qwen3.8 27B (dense, ~17 GB at Q4) | Called the strongest open model of its size in several roundups | About 4 tok/s here (dense models are bound by memory speed): batch jobs, not chat |
+| Recursive Flint 40B-A2.5B (MoE, ~23 GB) | Vendor reports 74.2% SWE-bench Verified; 2.5B active parameters, so it should be fast | No independent evaluation yet |
+| qwen3-coder 30B | Recommended for coding quality per GB | Coding only |
+
+Not found with benchmarks: Nemotron 3.5 Lightning, Laguna XS. Too large for this machine:
+gpt-oss-120b, Llama 4 Scout, anything much over 25 GB.
+
+For perspective: on third-party comparisons, Qwen3.6 trails Claude Opus 5.5 on every shared
+benchmark, narrowly on knowledge (GPQA Diamond 86% vs 90.6%) and widely on hard math
+(FrontierMath 20% vs 91%). It holds fewer facts and loses the thread sooner on long
+multi-step tasks. Local models earn their place with privacy and no per-token cost, so they
+suit private data more than work that needs the most capable model.
+
 A model removed from `models.list` leaves its file in `/srv/llm/data/models`. Deleting it
 is a step for the user: `sudo -u deploy rm /srv/llm/data/models/<file>
 /srv/llm/data/models/.verified/<file>`. Memory limits: the iGPU can address about 33 GB,
