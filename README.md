@@ -139,7 +139,7 @@ reply = json.load(urllib.request.urlopen(req, timeout=300))["choices"][0]["messa
 | Tests | `bin/test` |
 | Dev instance | `bin/dev up`: the same image on `127.0.0.1:8841` with a 0.8B model in `data-dev/` (`models-dev.ini`). `bin/dev down` stops it |
 | Benchmark a model | `docker run --rm --device /dev/dri --group-add 993 -v /srv/llm/data/models:/models:ro --entrypoint /app/llama-bench ghcr.io/ggml-org/llama.cpp:full-vulkan -m /models/<file> -ngl 99 -fa 1 -p 512 -n 128` (only while the live model is unloaded) |
-| Update llama.cpp | Change the image tag in `docker-compose.yml`, try it with `bin/dev up`, then deploy |
+| Update llama.cpp | Change the image tag in `Dockerfile`, try it with `bin/dev up`, then deploy |
 
 Monitoring: Gatus has `apps / llm` (`/health`), `portals / llm-8740` and `deploys / llm`.
 Beszel shows the container's CPU and memory.
@@ -148,6 +148,8 @@ Beszel shows the container's CPU and memory.
 
 ```
 docker-compose.yml   the container; bin/dev reuses it via LLM_* variables
+Dockerfile           the pinned llama.cpp image plus models.ini, so a presets change
+                     recreates the container on deploy (the router reads them only at start)
 models.ini           live presets: global settings, then one [section] per model
 models-dev.ini       the dev instance's presets
 models.list          files to download: set, file, bytes, sha256, pinned URL
@@ -162,9 +164,11 @@ data-dev/models/     (not in git) the dev model
 
 The `minerva` repo's README rules apply. In addition:
 
-- **Deploy after a push without asking**, like the other services. A deploy restarts the
-  container, which cuts off a chat or a service request in progress. If one is likely to
-  be running (check `curl -s 127.0.0.1:8741/slots?model=<name>` for busy slots), wait.
+- **Deploy after a push without asking**, like the other services. A deploy that changes
+  `models.ini`, `Dockerfile` or `docker-compose.yml` restarts the container, which cuts off
+  a chat or a service request in progress. If one is likely to be running (check
+  `curl -s 127.0.0.1:8741/slots?model=<name>` for busy slots), wait. The agent-playground
+  game uses the local models too: pause it from its Table tab first.
 - **Don't load a second large model beside the live one.** Use `bin/dev` (0.8B model) to
   test changes. Benchmark a large model only while the live one is unloaded, and never
   while players are on a game server without asking.

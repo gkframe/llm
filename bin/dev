@@ -14,14 +14,14 @@ cd "$(dirname "$(readlink -f "$0")")/.."
 [[ $PWD != /srv/* ]] || { echo "bin/dev runs in the working copy, not in /srv" >&2; exit 1; }
 
 compose() {
-  LLM_CONTAINER=llm-dev LLM_PORT=8841 LLM_MODELS=./data-dev/models LLM_PRESET=./models-dev.ini \
+  LLM_CONTAINER=llm-dev LLM_PORT=8841 LLM_MODELS=./data-dev/models LLM_PRESET=models-dev.ini \
     LLM_SLEEP="${LLM_SLEEP:-300}" docker compose -p llm-dev "$@"
 }
 
 case ${1:-} in
   up)
     bin/fetch-models --dev
-    compose up -d
+    compose up -d --build
     echo "llm-dev is up: http://127.0.0.1:8841 (model qwen3.5-0.8b)"
     ;;
   down)    compose down ;;

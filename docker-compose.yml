@@ -4,8 +4,12 @@ name: llm
 
 services:
   llm:
-    # Pinned to a llama.cpp build; bump the tag on purpose and test with bin/dev first
-    image: ghcr.io/ggml-org/llama.cpp:server-vulkan-b12602
+    # The pinned llama.cpp image plus the presets (see Dockerfile), so a presets change
+    # recreates the container on deploy
+    build:
+      context: .
+      args:
+        PRESET: ${LLM_PRESET:-models.ini}
     container_name: ${LLM_CONTAINER:-llm}
     restart: unless-stopped
     # Leaves the other cores to the game servers. Generation runs on the iGPU.
@@ -18,7 +22,6 @@ services:
       - "127.0.0.1:${LLM_PORT:-8741}:8080" # localhost only, published via tailscale serve
     volumes:
       - ${LLM_MODELS:-./data/models}:/models:ro
-      - ${LLM_PRESET:-./models.ini}:/models.ini:ro
     environment:
       TZ: America/New_York
     command:

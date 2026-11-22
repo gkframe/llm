@@ -1,0 +1,4 @@
+# The build only needs the presets; above all, keep the model files out of the context
+*
+!models.ini
+!models-dev.ini
