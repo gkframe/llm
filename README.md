@@ -24,8 +24,8 @@ script.
   starts a child process for the model named in the request, and forwards to it. With
   `--models-max 1`, asking for the other model unloads the first.
 - **Sleeping.** After `--sleep-idle-seconds 900` without requests the model is unloaded
-  and its memory (about 21 GB for Qwen, 14 GB for Gemma) goes back to the machine. The
-  next request reloads it, which takes a few seconds while the file is still in the page
+  and its memory (about 21 GB for Qwen, 24 GB for Flint, 14 GB for Gemma) goes back to the
+  machine. The next request reloads it, which takes a few seconds while the file is still in the page
   cache and longer after a reboot. `/health`, `/props`, `/models` and `/metrics` don't
   count as requests, so the status page doesn't keep a model awake.
 - **Alongside the games.** Every layer runs on the iGPU, and the container is capped at 4
@@ -40,19 +40,52 @@ script.
 | --- | --- | --- | --- |
 | `qwen3.6-35b-a3b` | Qwen3.6 35B-A3B, unsloth UD-Q4_K_M | 20.6 GiB | 465 tok/s reading, 23.7 tok/s writing (llama-bench); through the server 22.7 tok/s, or 17 tok/s each with two requests at once; 12.8 s for a cold request from the page cache; ~23 GB of iGPU memory loaded (2026-11-21) |
 | `gemma-4-26b-a4b` | Gemma 4 26B-A4B-it, Google's QAT Q4_0 | 13.4 GiB | 27.1 tok/s writing through the server; 6 s for a cold request (2026-11-21) |
+| `flint-40b-a2.5b` (on trial) | Recursive Flint 40B-A2.5B, ggml-org Q4_K_M | 21.8 GiB | See [Flint trial](#flint-trial-2026-11-26) |
 
-Both are mixture-of-experts models: large in total, but only 3–4B parameters work on each
-token, which is what makes them quick on this machine. Memory speed (dual-channel DDR5,
+All three are mixture-of-experts models: large in total, but only 2.5–4B parameters work on
+each token, which is what makes them quick on this machine. Memory speed (dual-channel DDR5,
 about 70 GB/s in practice) is the limit; a dense model of similar quality (e.g. a 27B)
 manages about 4 tok/s.
 
 Each request can use **32k tokens of context**, and two requests are served at once (64k
 in total, split between two slots). A full 32k prompt takes over a minute to read.
 
-Both models **think before answering** by default. The thinking comes back in
+All three models **think before answering** by default. The thinking comes back in
 `reasoning_content`, separately from `content`. If `max_tokens` is too small the answer can
 be empty because the limit ran out while thinking. For quick jobs, turn thinking off per
-request with `"chat_template_kwargs": {"enable_thinking": false}`.
+request with `"chat_template_kwargs": {"enable_thinking": false}`. Flint's chat template
+ignores that switch; for Flint send `"thinking_budget_tokens": 0` instead (not tried on the
+other two).
+
+### Flint trial (2026-11-26)
+
+Measured on Minerva with nobody on the game servers and the live model unloaded, Qwen3.6
+alongside under the same conditions. llama-bench (`-p 512 -n 128 -fa 1 -t 4`, also at 16k
+tokens of context already in the cache):
+
+| tok/s | Flint Q4_K_M | Qwen3.6 UD-Q4_K_M | Flint vs Qwen |
+| --- | --- | --- | --- |
+| Reading 512 tokens | 466 | 465 | same |
+| Writing 128 tokens | 28.3 | 23.9 | +18% |
+| Reading, at 16k context | 302 | 336 | −10% |
+| Writing, at 16k context | 23.6 | 21.5 | +10% |
+
+Through the server (thinking off unless stated):
+
+| | Flint | Qwen3.6 |
+| --- | --- | --- |
+| Cold request (from the page cache) | 16.8 s | 20.4 s (incl. unloading Flint) |
+| One request, code or prose | 28.0 tok/s | 23.0 tok/s |
+| Two at once | 22.8 tok/s each | 18.8 and 16.9 tok/s |
+| iGPU memory, loaded | ~24.5 GB | ~23 GB |
+| Playground-style JSON-schema reply, `max_tokens` 400, `enable_thinking: false` | 0 of 4 valid: it thought anyway and ran out (570–710 tokens with room) | 8 of 8 valid, 83–140 tokens |
+| Same, with `thinking_budget_tokens: 0` | 6 of 6 valid, 82–131 tokens | |
+| Bat-and-ball question, thinking on | right, 323 characters of reasoning, 7 s | right, 1145 characters, 21 s |
+
+Summary: Flint writes about 20% faster than Qwen3.6 in every case measured, reads long
+prompts about 10% slower, and needs 1.5 GB more memory. Answer quality was only spot
+checked. The agent playground would need `thinking_budget_tokens: 0` in its local calls
+before seating Flint.
 
 ### Adding or changing a model
 
@@ -77,7 +110,7 @@ and benchmark it against Qwen3.6 (Operations: Benchmark a model).
 | Qwen3.6 35B-A3B, MTP variant (`unsloth/Qwen3.6-35B-A3B-MTP-GGUF`) | Tried 2026-11-22 and removed. One request at a time it wrote 22% faster (27.9 vs 22.9 tok/s; +32% on code, +6% on prose) with 2 draft tokens; 3 was slower | Agent-playground-style calls were 10% slower: long prompts, JSON schema replies (40–50% of drafts accepted), two at a time. It also read prompts 4–6% slower and gained nothing with two requests at once |
 | Qwen3.6 35B-A3B at UD-Q5_K_M (24.6 GiB) | Slightly better answers than Q4_K_M | About 15% slower, less memory headroom |
 | Qwen3.8 27B (dense, ~17 GB at Q4) | Called the strongest open model of its size in several roundups | About 4 tok/s here (dense models are bound by memory speed): batch jobs, not chat |
-| Recursive Flint 40B-A2.5B (MoE, ~23 GB) | Vendor reports 74.2% SWE-bench Verified; 2.5B active parameters, so it should be fast | No independent evaluation yet |
+| Recursive Flint 40B-A2.5B (MoE, ~23 GB) | On trial since 2026-11-26 as `flint-40b-a2.5b`: see [Flint trial](#flint-trial-2026-11-26). Vendor reports 74.2% SWE-bench Verified | No independent evaluation yet |
 | qwen3-coder 30B | Recommended for coding quality per GB | Coding only |
 
 Not found with benchmarks: Nemotron 3.5 Lightning, Laguna XS. Too large for this machine:
