@@ -1,0 +1,48 @@
+{
+ "model": "qwen3.6-35b-a3b-q5",
+ "cold_s": 25.7,
+ "mem_loaded_gb": 28.2,
+ "code": {
+  "seconds": 29.1,
+  "tok_s": 21.0,
+  "tokens": 600,
+  "finish": "length",
+  "reasoning_chars": 0
+ },
+ "prose": {
+  "seconds": 29.1,
+  "tok_s": 21.0,
+  "tokens": 600,
+  "finish": "length",
+  "reasoning_chars": 0
+ },
+ "two_at_once_tok_s": [
+  15.0,
+  15.0
+ ],
+ "json_schema_400": [
+  {
+   "valid": true,
+   "tokens": 84
+  },
+  {
+   "valid": true,
+   "tokens": 100
+  },
+  {
+   "valid": true,
+   "tokens": 78
+  },
+  {
+   "valid": true,
+   "tokens": 102
+  }
+ ],
+ "bat_ball": {
+  "seconds": 36.3,
+  "reasoning_chars": 1518,
+  "right": true,
+  "answer": "\nSo the ball is 5\u00a2 and the bat is $1.05, which correctly adds to $1.10 with a $1.00 difference. (This is a famous puzzle because our intuition often jumps to 10\u00a2, but that would make the total $1.20.)"
+ },
+ "mem_peak_gb": 28.3
+}

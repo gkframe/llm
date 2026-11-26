@@ -1,0 +1,48 @@
+{
+ "model": "gemma-4-26b-a4b",
+ "cold_s": 10.2,
+ "mem_loaded_gb": 17.2,
+ "code": {
+  "seconds": 22.4,
+  "tok_s": 27.1,
+  "tokens": 600,
+  "finish": "length",
+  "reasoning_chars": 0
+ },
+ "prose": {
+  "seconds": 22.4,
+  "tok_s": 27.2,
+  "tokens": 600,
+  "finish": "length",
+  "reasoning_chars": 0
+ },
+ "two_at_once_tok_s": [
+  20.3,
+  20.3
+ ],
+ "json_schema_400": [
+  {
+   "valid": true,
+   "tokens": 70
+  },
+  {
+   "valid": true,
+   "tokens": 61
+  },
+  {
+   "valid": true,
+   "tokens": 71
+  },
+  {
+   "valid": true,
+   "tokens": 66
+  }
+ ],
+ "bat_ball": {
+  "seconds": 18.0,
+  "reasoning_chars": 720,
+  "right": true,
+  "answer": " bat is **x + $1.00**.\n3. Together, they cost $1.10: **x + (x + $1.00) = $1.10**.\n4. Simplify: **2x + $1.00 = $1.10**.\n5. Subtract $1.00 from both sides: **2x = $0.10**.\n6. Divide by 2: **x = $0.05**."
+ },
+ "mem_peak_gb": 17.5
+}

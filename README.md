@@ -24,7 +24,7 @@ script.
   starts a child process for the model named in the request, and forwards to it. With
   `--models-max 1`, asking for the other model unloads the first.
 - **Sleeping.** After `--sleep-idle-seconds 900` without requests the model is unloaded
-  and its memory (about 21 GB for Qwen, 24 GB for Flint, 14 GB for Gemma) goes back to the
+  and its memory (about 24 GB for Qwen, 24.5 GB for Flint, 17 GB for Gemma) goes back to the
   machine. The next request reloads it, which takes a few seconds while the file is still in the page
   cache and longer after a reboot. `/health`, `/props`, `/models` and `/metrics` don't
   count as requests, so the status page doesn't keep a model awake.
@@ -39,11 +39,11 @@ script.
 | Name (the API's `model`) | File | Size | Speed on Minerva |
 | --- | --- | --- | --- |
 | `qwen3.6-35b-a3b` | Qwen3.6 35B-A3B, unsloth UD-Q4_K_M | 20.6 GiB | 465 tok/s reading, 23.7 tok/s writing (llama-bench); through the server 22.7 tok/s, or 17 tok/s each with two requests at once; 12.8 s for a cold request from the page cache; ~23 GB of iGPU memory loaded (2026-11-21) |
-| `gemma-4-26b-a4b` | Gemma 4 26B-A4B-it, Google's QAT Q4_0 | 13.4 GiB | 27.1 tok/s writing through the server; 6 s for a cold request (2026-11-21) |
+| `gemma-4-26b-a4b` | Gemma 4 26B-A4B-it, Google's QAT Q4_0 | 13.4 GiB | 574 tok/s reading, 28.2 tok/s writing (llama-bench); through the server 27.1 tok/s, or 20.3 tok/s each with two requests at once; 10.2 s for a cold request; ~17 GB of iGPU memory loaded (2026-11-26, [details](#gemma-and-qwen-q5-benchmark-2026-11-26)) |
 | `flint-40b-a2.5b` | Recursive Flint 40B-A2.5B, ggml-org Q4_K_M | 21.8 GiB | 466 tok/s reading, 28.3 tok/s writing (llama-bench); through the server 28.0 tok/s, or 22.8 tok/s each with two requests at once; 16.8 s for a cold request; ~24.5 GB of iGPU memory loaded (2026-11-26, [details](#flint-benchmark-2026-11-26)) |
-| `qwen3.6-35b-a3b-q5` (on trial) | Qwen3.6 35B-A3B, unsloth UD-Q5_K_M | 24.6 GiB | Being benchmarked against the Q4_K_M, with a quality eval of all four (2026-11-26) |
+| `qwen3.6-35b-a3b-q5` (on trial) | Qwen3.6 35B-A3B, unsloth UD-Q5_K_M | 24.6 GiB | 441 tok/s reading, 21.8 tok/s writing (llama-bench); through the server 21.0 tok/s, or 15.0 tok/s each with two requests at once; 25.7 s for a cold request; ~28 GB of iGPU memory loaded (2026-11-26, [details](#gemma-and-qwen-q5-benchmark-2026-11-26)). Quality eval in progress |
 
-All three are mixture-of-experts models: large in total, but only 2.5–4B parameters work on
+All of them are mixture-of-experts models: large in total, but only 2.5–4B parameters work on
 each token, which is what makes them quick on this machine. Memory speed (dual-channel DDR5,
 about 70 GB/s in practice) is the limit; a dense model of similar quality (e.g. a 27B)
 manages about 4 tok/s.
@@ -51,7 +51,7 @@ manages about 4 tok/s.
 Each request can use **32k tokens of context**, and two requests are served at once (64k
 in total, split between two slots). A full 32k prompt takes over a minute to read.
 
-All three models **think before answering** by default. The thinking comes back in
+All the models **think before answering** by default. The thinking comes back in
 `reasoning_content`, separately from `content`. If `max_tokens` is too small the answer can
 be empty because the limit ran out while thinking. For quick jobs, turn thinking off per
 request with `"chat_template_kwargs": {"enable_thinking": false}`. Flint's chat template
@@ -88,6 +88,66 @@ Summary: Flint writes about 20% faster than Qwen3.6 in every case measured, read
 prompts about 10% slower, and needs 1.5 GB more memory. Answer quality was only spot
 checked. Kept after this trial. The agent playground seats it as `flint` and sends
 `thinking_budget_tokens: 0` with its local calls.
+
+### Gemma and Qwen Q5 benchmark (2026-11-26)
+
+The same protocol as the Flint benchmark, with Qwen3.6 Q4_K_M re-measured alongside as the
+baseline (its figures match the earlier run within 3%). Nobody on the game servers, the
+playground paused, the live model unloaded. Raw output and the script are in
+`evals/results/2026-11-26/speed/`. llama-bench, tok/s:
+
+| tok/s | Gemma Q4_0 | Qwen3.6 Q5_K_M | Qwen3.6 Q4_K_M | Flint Q4_K_M (above) |
+| --- | --- | --- | --- | --- |
+| Reading 512 tokens | 574 | 441 | 466 | 466 |
+| Writing 128 tokens | 28.2 | 21.8 | 23.9 | 28.3 |
+| Reading, at 16k context | 326 | 322 | 325 | 302 |
+| Writing, at 16k context | 22.3 | 19.6 | 21.5 | 23.6 |
+
+Through the server (thinking off unless stated):
+
+| | Gemma | Qwen3.6 Q5 | Qwen3.6 Q4 |
+| --- | --- | --- | --- |
+| Cold request (from the page cache) | 10.2 s | 25.7 s | 20.4 s |
+| One request, code or prose | 27.1 tok/s | 21.0 tok/s | 23.0 tok/s |
+| Two at once | 20.3 tok/s each | 15.0 tok/s each | 16.8 tok/s each |
+| iGPU memory, loaded (GTT + VRAM in use, against nothing loaded) | 17.2 GB | 28.2 GB | 23.8 GB |
+| Playground-style JSON-schema reply, `max_tokens` 400, `enable_thinking: false` | 4 of 4 valid, 61–71 tokens | 4 of 4 valid, 78–102 tokens | 4 of 4 valid, 72–101 tokens |
+| Bat-and-ball question, thinking on | right, 720 characters of reasoning, 18 s | right, 1518 characters, 36 s | right, 1396 characters, 28 s |
+
+Summary: Gemma is the quickest reader by a wide margin (23% faster than the others on short
+prompts) and writes as fast as Flint, in the least memory. Qwen3.6 at Q5 is 9% slower than
+Q4 at writing and 5% slower at reading short prompts, the same at 16k, and needs 4.4 GB more
+memory: about 28 GB of the roughly 33 GB the iGPU can address, which leaves little for the
+game servers. Answer quality: see the next section.
+
+### Answer quality (2026-11-26, in progress)
+
+The eval suite in `evals/` (see `evals/README.md`) runs 36 tasks: 12 coding (4 easy,
+4 medium, 4 hard, scored by hidden unit tests), 6 creative, 6 real agent-playground prompts
+and 12 chat. Each task is run twice per model, with the settings used in practice: thinking
+on, except the playground tasks, which are sent exactly as the playground sends them.
+Creative, playground and chat answers will be judged blind against `evals/rubric.md`
+once all four models have run. Raw answers: `evals/results/2026-11-26/<model>.jsonl`;
+automatic scores: `auto.json` there. Recorded model by model as each finishes.
+
+| | Gemma | Flint | Qwen3.6 Q4 | Qwen3.6 Q5 |
+| --- | --- | --- | --- | --- |
+| Coding, unit tests passed (easy / medium / hard, of 8 each) | 8 / 8 / 8 | running | to run | to run |
+| Playground replies, valid JSON | 12 of 12 | | | |
+| Answers cut off by `max_tokens` (16384) | 1 of 72 | | | |
+| Time for the 72 tasks, two at a time | 2 h 06 min | | | |
+
+**Gemma** (16:01–18:07):
+- **Coding.** It passed every test, including the hard tasks: a TTL cache, an expression
+  evaluator without `eval`, a refactor and a cheapest-route search. It thinks at length on
+  them, though: 7,000–14,000 tokens each, 7–13 minutes per hard task at about 17.5 tok/s.
+- **Facts and reasoning.** The fact questions and the two-trains word problem (12:00,
+  168 km) were right in both samples. Formatting checks passed: JSON-only output, three
+  bullets, word limits.
+- **One thinking loop.** The product blurb (60–80 words, three benefits) sent it into
+  counting words one per line, draft after draft. Sample 1 used all 16,384 tokens without
+  answering. Sample 0 gave a good 67-word blurb, but only after 14,000 tokens
+  (13.5 minutes). With thinking on, a word-count constraint can trap it.
 
 ### Adding or changing a model
 

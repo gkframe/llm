@@ -1,0 +1,48 @@
+{
+ "model": "qwen3.6-35b-a3b",
+ "cold_s": 20.4,
+ "mem_loaded_gb": 23.8,
+ "code": {
+  "seconds": 26.6,
+  "tok_s": 23.0,
+  "tokens": 600,
+  "finish": "length",
+  "reasoning_chars": 0
+ },
+ "prose": {
+  "seconds": 26.5,
+  "tok_s": 23.0,
+  "tokens": 600,
+  "finish": "length",
+  "reasoning_chars": 0
+ },
+ "two_at_once_tok_s": [
+  16.8,
+  16.8
+ ],
+ "json_schema_400": [
+  {
+   "valid": true,
+   "tokens": 92
+  },
+  {
+   "valid": true,
+   "tokens": 83
+  },
+  {
+   "valid": true,
+   "tokens": 72
+  },
+  {
+   "valid": true,
+   "tokens": 101
+  }
+ ],
+ "bat_ball": {
+  "seconds": 28.0,
+  "reasoning_chars": 1396,
+  "right": true,
+  "answer": "at) + $0.05 (ball) = $1.10 total. \n\n*(Note: It's a classic trick question! Many people's first guess is $0.10, but that would make the bat $1.10 and the total $1.20, which doesn't match the problem.)*"
+ },
+ "mem_peak_gb": 23.9
+}

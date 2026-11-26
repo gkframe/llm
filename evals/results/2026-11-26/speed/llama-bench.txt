@@ -1,0 +1,24 @@
+nobody online
+== gemma-4-26B_q4_0-it.gguf
+| model                          |       size |     params | backend    | ngl | threads |  fa |            test |                  t/s |
+| ------------------------------ | ---------: | ---------: | ---------- | --: | ------: | --: | --------------: | -------------------: |
+| gemma4 26B.A4B Q4_0            |  13.43 GiB |    25.23 B | Vulkan     |  99 |       4 |   1 |           pp512 |        574.02 ± 3.54 |
+| gemma4 26B.A4B Q4_0            |  13.43 GiB |    25.23 B | Vulkan     |  99 |       4 |   1 |           tg128 |         28.20 ± 0.05 |
+| gemma4 26B.A4B Q4_0            |  13.43 GiB |    25.23 B | Vulkan     |  99 |       4 |   1 |  pp512 @ d16384 |        326.05 ± 3.90 |
+| gemma4 26B.A4B Q4_0            |  13.43 GiB |    25.23 B | Vulkan     |  99 |       4 |   1 |  tg128 @ d16384 |         22.34 ± 0.04 |
+nobody online
+== Qwen3.6-35B-A3B-UD-Q5_K_M.gguf
+| model                          |       size |     params | backend    | ngl | threads |  fa |            test |                  t/s |
+| ------------------------------ | ---------: | ---------: | ---------- | --: | ------: | --: | --------------: | -------------------: |
+| qwen35moe 35B.A3B Q5_K - Medium |  24.63 GiB |    34.66 B | Vulkan     |  99 |       4 |   1 |           pp512 |        441.00 ± 0.99 |
+| qwen35moe 35B.A3B Q5_K - Medium |  24.63 GiB |    34.66 B | Vulkan     |  99 |       4 |   1 |           tg128 |         21.75 ± 0.00 |
+| qwen35moe 35B.A3B Q5_K - Medium |  24.63 GiB |    34.66 B | Vulkan     |  99 |       4 |   1 |  pp512 @ d16384 |        322.29 ± 4.85 |
+| qwen35moe 35B.A3B Q5_K - Medium |  24.63 GiB |    34.66 B | Vulkan     |  99 |       4 |   1 |  tg128 @ d16384 |         19.62 ± 0.05 |
+nobody online
+== Qwen3.6-35B-A3B-UD-Q4_K_M.gguf
+| model                          |       size |     params | backend    | ngl | threads |  fa |            test |                  t/s |
+| ------------------------------ | ---------: | ---------: | ---------- | --: | ------: | --: | --------------: | -------------------: |
+| qwen35moe 35B.A3B Q4_K - Medium |  20.60 GiB |    34.66 B | Vulkan     |  99 |       4 |   1 |           pp512 |        466.03 ± 2.30 |
+| qwen35moe 35B.A3B Q4_K - Medium |  20.60 GiB |    34.66 B | Vulkan     |  99 |       4 |   1 |           tg128 |         23.94 ± 0.02 |
+| qwen35moe 35B.A3B Q4_K - Medium |  20.60 GiB |    34.66 B | Vulkan     |  99 |       4 |   1 |  pp512 @ d16384 |        325.45 ± 6.93 |
+| qwen35moe 35B.A3B Q4_K - Medium |  20.60 GiB |    34.66 B | Vulkan     |  99 |       4 |   1 |  tg128 @ d16384 |         21.50 ± 0.04 |

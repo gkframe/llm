@@ -17,8 +17,9 @@ main README (Answer quality).
 Do this only while nothing else needs the server. Before each model, pause the
 agent-playground game (Table tab, or `POST 127.0.0.1:8701/api/games/<id>/control
 {"action":"pause"}`) and check that `curl -s 127.0.0.1:8741/slots?model=<loaded>` shows no
-busy slots. Resume the game afterwards. A model takes about one to one and a half hours
-(2 samples per task, two requests at a time).
+busy slots. Resume the game afterwards. A model takes about two hours (2 samples per task,
+two requests at a time; Gemma took 2 h 06 min). `results/2026-11-26/drive.sh` does all of
+this for a list of models.
 
 ```
 evals/run.py --model <name> --out evals/results/<date>      # resumable; re-run to fill gaps
