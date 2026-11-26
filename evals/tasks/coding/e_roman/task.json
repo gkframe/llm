@@ -1,0 +1,6 @@
+{
+  "id": "e_roman",
+  "category": "coding",
+  "level": "easy",
+  "prompt": "Write a Python function `int_to_roman(n: int) -> str` that converts an integer from 1 to 3999 to a Roman numeral using standard subtractive notation (e.g. 4 -> \"IV\", 1994 -> \"MCMXCIV\"). Raise ValueError for anything outside 1..3999, including 0 and negative numbers."
+}

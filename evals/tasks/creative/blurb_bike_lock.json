@@ -1,0 +1,6 @@
+{
+  "id": "blurb_bike_lock",
+  "category": "creative",
+  "prompt": "Write a product blurb for a fictional solar-powered smart bike lock called the Tallis. 60 to 80 words, mention exactly three benefits, and use no exclamation marks.",
+  "check": "60-80 words, exactly three benefits, no '!', name Tallis. Judge persuasiveness."
+}

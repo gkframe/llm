@@ -1,0 +1,6 @@
+{
+  "id": "h_evaluate",
+  "category": "coding",
+  "level": "hard",
+  "prompt": "Write a Python function `evaluate(expr: str)` that evaluates an arithmetic expression and returns exactly what Python would return for the same text, without using `eval`, `exec`, `compile` or the `ast` module.\n\nThe language:\n- Numbers: non-negative integer literals (`0`, `42`) and decimal literals with a dot (`3.5`, `2.`, `.5`). Integer literals give ints and decimal literals give floats, as in Python.\n- Binary operators `+ - * / // % **`, unary `+` and `-`, and parentheses, with Python's precedence and associativity. In particular `**` is right-associative and binds tighter than a unary minus on its left but not one on its right: `-2**2` is -4, `2**-1` is 0.5 and `2**3**2` is 512.\n- Whitespace between tokens is allowed.\n\nRaise ValueError for anything that is not a valid expression in this language: empty input, unbalanced parentheses, unknown characters, two numbers in a row, a dangling operator, a malformed number such as `1.2.3`. Division or modulo by zero raises ZeroDivisionError, as in Python."
+}

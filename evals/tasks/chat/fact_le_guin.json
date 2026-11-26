@@ -1,0 +1,6 @@
+{
+  "id": "fact_le_guin",
+  "category": "chat",
+  "prompt": "Who wrote 'The Left Hand of Darkness', and in what year was it first published? One sentence.",
+  "check": "Ursula K. Le Guin, 1969. One sentence."
+}

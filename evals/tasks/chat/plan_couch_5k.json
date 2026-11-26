@@ -1,0 +1,6 @@
+{
+  "id": "plan_couch_5k",
+  "category": "chat",
+  "prompt": "I can't currently run for more than a minute. Make me a 6-week plan to run 5 km without stopping, three runs a week, as a table.",
+  "check": "Progressive run/walk intervals over 6 weeks, three sessions/week, ends with continuous ~5 km/30 min; table format; realistic progression; brief safety notes ok."
+}

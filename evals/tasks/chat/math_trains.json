@@ -1,0 +1,6 @@
+{
+  "id": "math_trains",
+  "category": "chat",
+  "prompt": "A train leaves a station at 9:40 travelling at 72 km/h. A second train leaves the same station at 10:15 on a parallel track in the same direction at 96 km/h. At what time does the second train draw level with the first, and how far from the station are they then?",
+  "check": "12:00, 168 km from the station."
+}

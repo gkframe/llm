@@ -1,0 +1,6 @@
+{
+  "id": "advice_sourdough",
+  "category": "chat",
+  "prompt": "My sourdough loaves keep coming out dense and gummy inside, even though the crust looks fine. I bake at 230°C for 40 minutes in a Dutch oven. What's probably going wrong, and what should I try first?",
+  "check": "Likely causes: underproofed/weak starter, cutting while hot, underbaked (check internal temp ~96-98°C), too much hydration. Should prioritise and give a concrete first step."
+}

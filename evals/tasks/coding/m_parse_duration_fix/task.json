@@ -1,0 +1,6 @@
+{
+  "id": "m_parse_duration_fix",
+  "category": "coding",
+  "level": "medium",
+  "prompt": "This function has bugs: it does not do what its docstring says. Find them and give the corrected function, keeping the same name and signature.\n\n```python\ndef parse_duration(s):\n    \"\"\"Parse a duration like '1h30m', '45s', '2h5s' or '90m' into whole seconds.\n\n    Units are h, m and s. Each unit appears at most once, units appear in that\n    order (h before m before s), and every unit has a number of one or more digits\n    in front of it. At least one unit is required. Numbers may be larger than the\n    next unit up ('90m' is fine). Anything else, including '', '15', '1h1h',\n    '30m1h', 'h', '1d' and '1h 30m', raises ValueError.\n    \"\"\"\n    units = {'h': 3600, 'm': 60, 's': 1}\n    total = 0\n    num = ''\n    for ch in s:\n        if ch.isdigit():\n            num += ch\n        else:\n            total += int(num) * units[ch]\n            num = ''\n    return total\n```"
+}

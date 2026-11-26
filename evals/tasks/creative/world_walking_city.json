@@ -1,0 +1,6 @@
+{
+  "id": "world_walking_city",
+  "category": "creative",
+  "prompt": "Describe a city built on the back of an enormous creature that walks very slowly across a continent. Cover how the economy works, one unusual law, and one festival. At most 300 words.",
+  "check": "<=300 words, covers economy, one law, one festival, coherent & original worldbuilding."
+}

@@ -1,0 +1,6 @@
+{
+  "id": "h_cheapest_route",
+  "category": "coding",
+  "level": "hard",
+  "prompt": "Write a Python function `cheapest_route(flights, src, dst, max_stops)`.\n\n- `flights` is a list of `(origin, destination, price)` tuples: one-way flights between airports named by strings, with integer prices >= 0. There may be several flights between the same pair at different prices.\n- A route is a sequence of flights from `src` to `dst` that visits no airport twice and has at most `max_stops` intermediate airports (so at most `max_stops + 1` flights). `max_stops` is >= 0.\n- Return `(total_price, airports)` for the best route, where `airports` is the list of airports visited, from `src` to `dst` inclusive. The best route is the cheapest; among equally cheap routes, the one with fewer flights; among those, the one whose `airports` list is lexicographically smallest.\n- If `src == dst`, return `(0, [src])`. If there is no route, return `None`.\n\nIt should handle a few thousand flights and a few hundred airports quickly."
+}

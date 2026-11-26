@@ -1,0 +1,6 @@
+{
+  "id": "m_build_order",
+  "category": "coding",
+  "level": "medium",
+  "prompt": "Write a Python function `build_order(deps: dict[str, list[str]]) -> list[str]`. `deps` maps each target to the targets it depends on. Return every target exactly once, ordered so that each target comes after all of its dependencies. Targets that appear only as dependencies (not as keys) are included too. When more than one target could come next, pick the alphabetically smallest, so the result is the lexicographically smallest valid order. Raise ValueError if the dependencies contain a cycle (including a target that depends on itself). Duplicate entries in a dependency list are allowed and mean the same as one."
+}

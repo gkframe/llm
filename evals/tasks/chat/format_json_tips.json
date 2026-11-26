@@ -1,0 +1,7 @@
+{
+  "id": "format_json_tips",
+  "category": "chat",
+  "prompt": "Give me exactly 5 tips for sleeping better, as a JSON array of objects with the keys \"tip\" and \"why\". Output only the JSON, with no other text and no code fence.",
+  "check": "Output must be only a valid JSON array of 5 objects with exactly keys tip and why; no fence, no prose.",
+  "auto": "json_array_5"
+}

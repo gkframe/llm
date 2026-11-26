@@ -1,0 +1,6 @@
+{
+  "id": "fact_canberra",
+  "category": "chat",
+  "prompt": "What's the capital of Australia, and why isn't it Sydney?",
+  "check": "Canberra. Chosen as a compromise between rival Sydney and Melbourne (constitution required a site in NSW at least 100 miles from Sydney); Melbourne was temporary seat until 1927."
+}

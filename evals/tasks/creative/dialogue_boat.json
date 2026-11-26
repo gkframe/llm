@@ -1,0 +1,6 @@
+{
+  "id": "dialogue_boat",
+  "category": "creative",
+  "prompt": "Write a dialogue (no narration beyond brief stage directions) between a 16-year-old and her grandfather, arguing about whether to sell the family's old sailing boat. The grandfather is seriously ill but never says so; the reader should be able to sense it. About 300 words.",
+  "check": "Dialogue form, ~300 words, illness conveyed only by subtext (never stated). Judge subtlety, character voices."
+}

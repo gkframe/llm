@@ -1,0 +1,6 @@
+{
+  "id": "e_top_words",
+  "category": "coding",
+  "level": "easy",
+  "prompt": "Write a Python function `top_words(text: str, k: int) -> list[tuple[str, int]]` that returns the k most frequent words in `text` with their counts, most frequent first. A word is a run of ASCII letters and apostrophes; compare case-insensitively and return words in lower case. Break ties alphabetically. Leading and trailing apostrophes are not part of a word (\"'hello'\" is \"hello\", but \"don't\" stays \"don't\"); a run that is only apostrophes is not a word. If there are fewer than k distinct words, return them all."
+}

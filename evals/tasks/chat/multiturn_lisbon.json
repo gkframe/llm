@@ -1,0 +1,19 @@
+{
+  "id": "multiturn_lisbon",
+  "category": "chat",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Plan a 3-day trip to Lisbon for me, one short paragraph per day."
+    },
+    {
+      "role": "assistant",
+      "content": "Day 1: Start in Alfama, wandering the lanes up to São Jorge Castle for views over the river, then lunch on grilled sardines at a tasca and an evening fado show.\n\nDay 2: Head to Belém for the Jerónimos Monastery and the Tower, with pastéis de Belém at the original bakery, then the MAAT museum and sunset at the Miradouro de Santa Catarina.\n\nDay 3: Take the train to Sintra for Pena Palace and the Quinta da Regaleira, returning for dinner in Bairro Alto with a seafood platter."
+    },
+    {
+      "role": "user",
+      "content": "Day 2 is a Monday and I'm vegetarian. Adjust the plan, and keep it brief."
+    }
+  ],
+  "check": "Jerónimos Monastery and Belém Tower are closed on Mondays, so a good answer moves Belém to another day (e.g. swaps with Sintra, which is open daily) or replaces it. Replaces sardines and the seafood platter with vegetarian options. Keeps it brief."
+}

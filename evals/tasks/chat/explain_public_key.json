@@ -1,0 +1,6 @@
+{
+  "id": "explain_public_key",
+  "category": "chat",
+  "prompt": "Explain to a curious 12-year-old how two strangers on the internet can send each other private messages when everything they send can be seen by others. Under 200 words.",
+  "check": "Should convey public/private key idea (e.g. padlock analogy) accurately, age-appropriate, under 200 words."
+}

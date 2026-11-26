@@ -1,0 +1,6 @@
+{
+  "id": "poem_server_room",
+  "category": "creative",
+  "prompt": "Write a 14-line poem about a server room at 3 a.m. Rhyme scheme ABAB CDCD EFEF GG. Use the word \"lantern\" once, and do not use the word \"silence\".",
+  "check": "14 lines, ABAB CDCD EFEF GG, 'lantern' exactly once, no 'silence'. Judge craft and imagery too."
+}

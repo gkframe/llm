@@ -1,0 +1,6 @@
+{
+  "id": "fact_tungsten",
+  "category": "chat",
+  "prompt": "Which element has atomic number 74, and what is it mainly used for?",
+  "check": "Tungsten (W). Main uses: cemented carbides (tungsten carbide for cutting tools, mining/drilling), alloys/high-speed steel, filaments/electrodes historically; highest melting point of metals."
+}

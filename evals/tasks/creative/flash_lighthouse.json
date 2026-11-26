@@ -1,0 +1,6 @@
+{
+  "id": "flash_lighthouse",
+  "category": "creative",
+  "prompt": "Write a piece of flash fiction, 200 to 300 words: a lighthouse keeper receives a letter addressed to the keeper who held the post fifty years ago. End on a line of dialogue.",
+  "check": "200-300 words, premise followed, ends on a line of dialogue. Judge craft, surprise, emotional effect."
+}

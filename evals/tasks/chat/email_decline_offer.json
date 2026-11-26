@@ -1,0 +1,6 @@
+{
+  "id": "email_decline_offer",
+  "category": "chat",
+  "prompt": "Write a short, warm email declining a job offer from a company called Fernhill Analytics. I've accepted another role, but I'd like to keep the door open for the future. Under 150 words.",
+  "check": "Polite, warm, clear decline, keeps door open, under 150 words, no invented excessive details."
+}

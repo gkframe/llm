@@ -1,0 +1,6 @@
+{
+  "id": "m_csv_line",
+  "category": "coding",
+  "level": "medium",
+  "prompt": "Write a Python function `parse_csv_line(line: str) -> list[str]` that splits one line of CSV into fields, without using the csv module.\n\nRules:\n- Fields are separated by commas. An empty line is one empty field: `[\"\"]`. A trailing comma means a final empty field.\n- A field that starts with a double quote is quoted: everything up to the closing quote is literal (commas included), and two double quotes in a row inside it stand for one double quote. The closing quote must be followed by a comma or the end of the line; otherwise raise ValueError. A quoted field with no closing quote also raises ValueError.\n- A field that does not start with a double quote is unquoted and taken literally, up to the next comma, including any spaces and any double quotes inside it (`a\"b` is the field `a\"b`).\n- Spaces are never trimmed; a field that starts with a space followed by a quote is unquoted."
+}

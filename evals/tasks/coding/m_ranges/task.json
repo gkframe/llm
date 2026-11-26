@@ -1,0 +1,6 @@
+{
+  "id": "m_ranges",
+  "category": "coding",
+  "level": "medium",
+  "prompt": "Write two Python functions.\n\n`expand_ranges(s: str) -> list[int]` reads a comma-separated list of items. Each item is an integer or a range `a-b` (inclusive, a <= b). Integers may be negative, so `-3--1` is -3, -2, -1 and `-2-2` is -2 to 2. Spaces around items are allowed (`1, 3-5`), but not inside a number. Return the numbers sorted, without duplicates. An empty or all-space string gives `[]`. Raise ValueError for anything else: a range with a > b, an empty item (`1,,2`), or a malformed item.\n\n`compress_ranges(nums) -> str` does the reverse for any iterable of ints (any order, duplicates allowed): sort, drop duplicates, write each run of three or more consecutive numbers as `a-b`, and write other numbers singly, all joined by `,` with no spaces. So [1, 2, 3, 5, 6, 8] gives `1-3,5,6,8` and [] gives ``."
+}

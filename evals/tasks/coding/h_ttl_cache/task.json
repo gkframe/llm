@@ -1,0 +1,6 @@
+{
+  "id": "h_ttl_cache",
+  "category": "coding",
+  "level": "hard",
+  "prompt": "Write a Python class `TTLCache`: a least-recently-used cache whose entries also expire.\n\n- `TTLCache(capacity: int, ttl: float, clock=time.monotonic)`. `clock()` returns the current time in seconds; tests pass a fake clock. Raise ValueError if capacity < 1 or ttl <= 0.\n- An entry set at time t expires at t + ttl: from that moment on (clock() >= t + ttl) it is gone, as if never stored.\n- `set(key, value)` stores the value, restarts the entry's expiry from now, and makes it the most recently used. If the key is not already live and the cache already holds `capacity` live entries, first evict the least recently used live entry.\n- `get(key, default=None)` returns the value of a live entry and makes it the most recently used, without extending its expiry. Otherwise it returns `default`.\n- `delete(key) -> bool` removes a live entry and returns True, or returns False if there was none.\n- `len(cache)` is the number of live entries, and `key in cache` tells whether an entry is live; neither changes recency.\n\nOperations should be O(1) amortised apart from dropping expired entries."
+}

@@ -1,0 +1,6 @@
+{
+  "id": "rewrite_noir",
+  "category": "creative",
+  "prompt": "Rewrite this incident notice in the voice of a 1940s hard-boiled detective narrating the case. Keep every fact.\n\n\"On Tuesday 4 March, between 02:13 and 03:00 UTC, the payments API returned errors for about 30% of requests. The cause was an expired TLS certificate on one of three load balancers. The certificate was renewed and the load balancer restarted. Automatic renewal alerts have been added. No payments were lost; failed requests were retried by clients.\"",
+  "check": "Must keep all facts: Tue 4 March, 02:13-03:00 UTC (47 min), ~30% errors, payments API, expired TLS cert on 1 of 3 load balancers, renewed + restarted, renewal alerts added, no payments lost, clients retried. Judge voice."
+}

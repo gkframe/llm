@@ -1,0 +1,6 @@
+{
+  "id": "e_isbn10",
+  "category": "coding",
+  "level": "easy",
+  "prompt": "Write a Python function `is_isbn10(s: str) -> bool` that checks an ISBN-10. Hyphens may appear anywhere and are ignored; no other characters are allowed (not even spaces). After removing hyphens there must be exactly 10 characters: nine digits, then a digit or an upper-case 'X' meaning 10. It is valid when the sum of each digit times its weight (10 for the first character down to 1 for the last) is divisible by 11."
+}
