@@ -41,6 +41,7 @@ script.
 | `qwen3.6-35b-a3b` | Qwen3.6 35B-A3B, unsloth UD-Q4_K_M | 20.6 GiB | 465 tok/s reading, 23.7 tok/s writing (llama-bench); through the server 22.7 tok/s, or 17 tok/s each with two requests at once; 12.8 s for a cold request from the page cache; ~23 GB of iGPU memory loaded (2026-11-21) |
 | `gemma-4-26b-a4b` | Gemma 4 26B-A4B-it, Google's QAT Q4_0 | 13.4 GiB | 27.1 tok/s writing through the server; 6 s for a cold request (2026-11-21) |
 | `flint-40b-a2.5b` | Recursive Flint 40B-A2.5B, ggml-org Q4_K_M | 21.8 GiB | 466 tok/s reading, 28.3 tok/s writing (llama-bench); through the server 28.0 tok/s, or 22.8 tok/s each with two requests at once; 16.8 s for a cold request; ~24.5 GB of iGPU memory loaded (2026-11-26, [details](#flint-benchmark-2026-11-26)) |
+| `qwen3.6-35b-a3b-q5` (on trial) | Qwen3.6 35B-A3B, unsloth UD-Q5_K_M | 24.6 GiB | Being benchmarked against the Q4_K_M, with a quality eval of all four (2026-11-26) |
 
 All three are mixture-of-experts models: large in total, but only 2.5–4B parameters work on
 each token, which is what makes them quick on this machine. Memory speed (dual-channel DDR5,

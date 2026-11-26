@@ -4,6 +4,7 @@
 # used by models-dev.ini). URLs name a Hugging Face commit, not main, so a file can't change
 # underneath us; size and sha256 come from that commit's file listing.
 live Qwen3.6-35B-A3B-UD-Q4_K_M.gguf 22134528992 ac0e2c1189e055faa36eff361580e79c5bd6f8e76bffb4ce547f167d53e31a61 https://huggingface.co/unsloth/Qwen3.6-35B-A3B-GGUF/resolve/a483e9e6cbd595906af30beda3187c2663a1118c/Qwen3.6-35B-A3B-UD-Q4_K_M.gguf
+live Qwen3.6-35B-A3B-UD-Q5_K_M.gguf 26456194016 c13ce26253ea334df472bd8fbd2d6da66d8a41195c17f6fcbf44c4d20ece0932 https://huggingface.co/unsloth/Qwen3.6-35B-A3B-GGUF/resolve/a483e9e6cbd595906af30beda3187c2663a1118c/Qwen3.6-35B-A3B-UD-Q5_K_M.gguf
 live gemma-4-26B_q4_0-it.gguf 14439363584 3eca3b8f6d7baf218a7dd6bba5fb59a56ee25fe2d567b6f5f589b4f697eca51d https://huggingface.co/google/gemma-4-26B-A4B-it-qat-q4_0-gguf/resolve/d1c082be9cf3c8a514acf63b8761f4b41935842e/gemma-4-26B_q4_0-it.gguf
 live Flint-Q4_K_M.gguf 23387911136 c3c4d93f9db92627a2fc47ea8fe8c64a094cabd3549db544bcdd2c00e9a9a347 https://huggingface.co/ggml-org/Flint-GGUF/resolve/b6763353f6f47bb4ae94f9f57d2d36906d2e4543/Flint-Q4_K_M.gguf
 dev Qwen3.5-0.8B-Q8_0.gguf 833592096 37ae482d336108d23516fa35e8e0c4126688d81018b87178a18d752a1357814f https://huggingface.co/ggml-org/Qwen3.5-0.8B-GGUF/resolve/004fd086eccea9f7cf867aa07ba328773beef81d/Qwen3.5-0.8B-Q8_0.gguf
