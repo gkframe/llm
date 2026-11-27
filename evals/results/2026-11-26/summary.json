@@ -1,0 +1,2862 @@
+{
+ "by_model": {
+  "gemma-4-26b-a4b": {
+   "all": 4.14,
+   "chat": 4.57,
+   "creative": 3.61,
+   "playground": 3.79
+  },
+  "flint-40b-a2.5b": {
+   "all": 3.57,
+   "chat": 4.31,
+   "creative": 3.22,
+   "playground": 2.42
+  },
+  "qwen3.6-35b-a3b-q5": {
+   "all": 3.82,
+   "chat": 4.36,
+   "creative": 3.36,
+   "playground": 3.21
+  },
+  "qwen3.6-35b-a3b": {
+   "all": 3.84,
+   "chat": 4.25,
+   "creative": 3.53,
+   "playground": 3.33
+  }
+ },
+ "answers": [
+  {
+   "task": "fact_le_guin",
+   "category": "chat",
+   "label": "A",
+   "model": "gemma-4-26b-a4b",
+   "sample": 1,
+   "scores": {
+    "correct": 5,
+    "helpful": 5,
+    "clear": 5,
+    "instructions": 5,
+    "note": "right, one sentence"
+   },
+   "mean": 5.0
+  },
+  {
+   "task": "fact_le_guin",
+   "category": "chat",
+   "label": "B",
+   "model": "gemma-4-26b-a4b",
+   "sample": 0,
+   "scores": {
+    "correct": 5,
+    "helpful": 5,
+    "clear": 5,
+    "instructions": 5,
+    "note": "right, one sentence"
+   },
+   "mean": 5.0
+  },
+  {
+   "task": "fact_le_guin",
+   "category": "chat",
+   "label": "C",
+   "model": "flint-40b-a2.5b",
+   "sample": 1,
+   "scores": {
+    "correct": 5,
+    "helpful": 5,
+    "clear": 5,
+    "instructions": 5,
+    "note": "right, one sentence"
+   },
+   "mean": 5.0
+  },
+  {
+   "task": "fact_le_guin",
+   "category": "chat",
+   "label": "D",
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 0,
+   "scores": {
+    "correct": 5,
+    "helpful": 5,
+    "clear": 5,
+    "instructions": 5,
+    "note": "right, one sentence"
+   },
+   "mean": 5.0
+  },
+  {
+   "task": "fact_le_guin",
+   "category": "chat",
+   "label": "E",
+   "model": "flint-40b-a2.5b",
+   "sample": 0,
+   "scores": {
+    "correct": 5,
+    "helpful": 5,
+    "clear": 5,
+    "instructions": 5,
+    "note": "right, one sentence"
+   },
+   "mean": 5.0
+  },
+  {
+   "task": "fact_le_guin",
+   "category": "chat",
+   "label": "F",
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 1,
+   "scores": {
+    "correct": 5,
+    "helpful": 5,
+    "clear": 5,
+    "instructions": 5,
+    "note": "right, one sentence"
+   },
+   "mean": 5.0
+  },
+  {
+   "task": "fact_le_guin",
+   "category": "chat",
+   "label": "G",
+   "model": "qwen3.6-35b-a3b",
+   "sample": 0,
+   "scores": {
+    "correct": 5,
+    "helpful": 5,
+    "clear": 5,
+    "instructions": 5,
+    "note": "right, one sentence"
+   },
+   "mean": 5.0
+  },
+  {
+   "task": "fact_le_guin",
+   "category": "chat",
+   "label": "H",
+   "model": "qwen3.6-35b-a3b",
+   "sample": 1,
+   "scores": {
+    "correct": 5,
+    "helpful": 5,
+    "clear": 5,
+    "instructions": 5,
+    "note": "right, one sentence"
+   },
+   "mean": 5.0
+  },
+  {
+   "task": "blurb_bike_lock",
+   "category": "creative",
+   "label": "A",
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 1,
+   "scores": {
+    "craft": 4,
+    "brief": 4,
+    "originality": 3,
+    "note": "71 words, polished; connectivity bundles keyless unlock and alerts, so 3 benefits only loosely"
+   },
+   "mean": 3.6666666666666665
+  },
+  {
+   "task": "blurb_bike_lock",
+   "category": "creative",
+   "label": "B",
+   "model": "flint-40b-a2.5b",
+   "sample": 0,
+   "scores": {
+    "craft": 3,
+    "brief": 5,
+    "originality": 3,
+    "note": "67 words, exactly three; 'primary/second/final' listing is mechanical"
+   },
+   "mean": 3.6666666666666665
+  },
+  {
+   "task": "blurb_bike_lock",
+   "category": "creative",
+   "label": "C",
+   "model": "gemma-4-26b-a4b",
+   "sample": 1,
+   "scores": {
+    "craft": 1,
+    "brief": 1,
+    "originality": 1,
+    "note": "empty, cut off"
+   },
+   "mean": 1.0
+  },
+  {
+   "task": "blurb_bike_lock",
+   "category": "creative",
+   "label": "D",
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 0,
+   "scores": {
+    "craft": 3,
+    "brief": 4,
+    "originality": 2,
+    "note": "70 words; repeats the power benefit across two sentences"
+   },
+   "mean": 3.0
+  },
+  {
+   "task": "blurb_bike_lock",
+   "category": "creative",
+   "label": "E",
+   "model": "qwen3.6-35b-a3b",
+   "sample": 0,
+   "scores": {
+    "craft": 3,
+    "brief": 3,
+    "originality": 2,
+    "note": "62 words; alloy, app monitoring, battery, alerts: four benefits"
+   },
+   "mean": 2.6666666666666665
+  },
+  {
+   "task": "blurb_bike_lock",
+   "category": "creative",
+   "label": "F",
+   "model": "gemma-4-26b-a4b",
+   "sample": 0,
+   "scores": {
+    "craft": 3,
+    "brief": 5,
+    "originality": 2,
+    "note": "67 words, three clear benefits; ends on a cliche"
+   },
+   "mean": 3.3333333333333335
+  },
+  {
+   "task": "blurb_bike_lock",
+   "category": "creative",
+   "label": "G",
+   "model": "flint-40b-a2.5b",
+   "sample": 1,
+   "scores": {
+    "craft": 2,
+    "brief": 5,
+    "originality": 2,
+    "note": "60 words exactly; flat sentences and a padded last line"
+   },
+   "mean": 3.0
+  },
+  {
+   "task": "blurb_bike_lock",
+   "category": "creative",
+   "label": "H",
+   "model": "qwen3.6-35b-a3b",
+   "sample": 1,
+   "scores": {
+    "craft": 4,
+    "brief": 5,
+    "originality": 3,
+    "note": "66 words, three benefits (power, geofencing, steel); 'unparalleled' cliche"
+   },
+   "mean": 4.0
+  },
+  {
+   "task": "summarise_minutes",
+   "category": "chat",
+   "label": "A",
+   "model": "flint-40b-a2.5b",
+   "sample": 0,
+   "scores": {
+    "correct": 5,
+    "helpful": 5,
+    "clear": 4,
+    "instructions": 5,
+    "note": "all five decisions with counts; bullets crowded"
+   },
+   "mean": 4.75
+  },
+  {
+   "task": "summarise_minutes",
+   "category": "chat",
+   "label": "B",
+   "model": "flint-40b-a2.5b",
+   "sample": 1,
+   "scores": {
+    "correct": 5,
+    "helpful": 5,
+    "clear": 4,
+    "instructions": 5,
+    "note": "all decisions; crowded second and third bullets"
+   },
+   "mean": 4.75
+  },
+  {
+   "task": "summarise_minutes",
+   "category": "chat",
+   "label": "C",
+   "model": "qwen3.6-35b-a3b",
+   "sample": 1,
+   "scores": {
+    "correct": 5,
+    "helpful": 4,
+    "clear": 5,
+    "instructions": 4,
+    "note": "omits the Christmas lights date"
+   },
+   "mean": 4.5
+  },
+  {
+   "task": "summarise_minutes",
+   "category": "chat",
+   "label": "D",
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 0,
+   "scores": {
+    "correct": 5,
+    "helpful": 5,
+    "clear": 4,
+    "instructions": 5,
+    "note": "all decisions; uneven grouping"
+   },
+   "mean": 4.75
+  },
+  {
+   "task": "summarise_minutes",
+   "category": "chat",
+   "label": "E",
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 1,
+   "scores": {
+    "correct": 5,
+    "helpful": 5,
+    "clear": 4,
+    "instructions": 5,
+    "note": "all decisions; grouping by vote type is odd"
+   },
+   "mean": 4.75
+  },
+  {
+   "task": "summarise_minutes",
+   "category": "chat",
+   "label": "F",
+   "model": "gemma-4-26b-a4b",
+   "sample": 1,
+   "scores": {
+    "correct": 5,
+    "helpful": 5,
+    "clear": 5,
+    "instructions": 5,
+    "note": "all decisions, concise"
+   },
+   "mean": 5.0
+  },
+  {
+   "task": "summarise_minutes",
+   "category": "chat",
+   "label": "G",
+   "model": "qwen3.6-35b-a3b",
+   "sample": 0,
+   "scores": {
+    "correct": 5,
+    "helpful": 5,
+    "clear": 5,
+    "instructions": 5,
+    "note": "all decisions, gives 7-0 for unanimous"
+   },
+   "mean": 5.0
+  },
+  {
+   "task": "summarise_minutes",
+   "category": "chat",
+   "label": "H",
+   "model": "gemma-4-26b-a4b",
+   "sample": 0,
+   "scores": {
+    "correct": 5,
+    "helpful": 5,
+    "clear": 5,
+    "instructions": 5,
+    "note": "all decisions, concise"
+   },
+   "mean": 5.0
+  },
+  {
+   "task": "poem_server_room",
+   "category": "creative",
+   "label": "A",
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 1,
+   "scores": {
+    "craft": 3,
+    "brief": 3,
+    "originality": 2,
+    "note": "hold/call do not rhyme, glow/glows near-identical; padded images ('winter's mold')"
+   },
+   "mean": 2.6666666666666665
+  },
+  {
+   "task": "poem_server_room",
+   "category": "creative",
+   "label": "B",
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 0,
+   "scores": {
+    "craft": 3,
+    "brief": 4,
+    "originality": 3,
+    "note": "scheme holds until the couplet (on/spun is weak); no stanza breaks; some nice lines"
+   },
+   "mean": 3.3333333333333335
+  },
+  {
+   "task": "poem_server_room",
+   "category": "creative",
+   "label": "C",
+   "model": "gemma-4-26b-a4b",
+   "sample": 1,
+   "scores": {
+    "craft": 4,
+    "brief": 5,
+    "originality": 3,
+    "note": "scheme exact, 'each tiny LED, a lantern bright' is a good turn; some stock images"
+   },
+   "mean": 4.0
+  },
+  {
+   "task": "poem_server_room",
+   "category": "creative",
+   "label": "D",
+   "model": "qwen3.6-35b-a3b",
+   "sample": 1,
+   "scores": {
+    "craft": 3,
+    "brief": 4,
+    "originality": 3,
+    "note": "unseen/stream slant; line 3-4 syntax breaks down"
+   },
+   "mean": 3.3333333333333335
+  },
+  {
+   "task": "poem_server_room",
+   "category": "creative",
+   "label": "E",
+   "model": "flint-40b-a2.5b",
+   "sample": 0,
+   "scores": {
+    "craft": 2,
+    "brief": 3,
+    "originality": 2,
+    "note": "third quatrain is one rhyme (air/flare/air/care), meter collapses, repetitive"
+   },
+   "mean": 2.3333333333333335
+  },
+  {
+   "task": "poem_server_room",
+   "category": "creative",
+   "label": "F",
+   "model": "flint-40b-a2.5b",
+   "sample": 1,
+   "scores": {
+    "craft": 2,
+    "brief": 3,
+    "originality": 2,
+    "note": "rhymes words with themselves (gloom/gloom, pulse/pulse); list-like"
+   },
+   "mean": 2.3333333333333335
+  },
+  {
+   "task": "poem_server_room",
+   "category": "creative",
+   "label": "G",
+   "model": "gemma-4-26b-a4b",
+   "sample": 0,
+   "scores": {
+    "craft": 4,
+    "brief": 5,
+    "originality": 3,
+    "note": "clean scheme and meter; some cliches (velvet night, copper veins)"
+   },
+   "mean": 4.0
+  },
+  {
+   "task": "poem_server_room",
+   "category": "creative",
+   "label": "H",
+   "model": "qwen3.6-35b-a3b",
+   "sample": 0,
+   "scores": {
+    "craft": 3,
+    "brief": 4,
+    "originality": 3,
+    "note": "moon/gloom slant; awkward final line; 'no lantern' use is fine"
+   },
+   "mean": 3.3333333333333335
+  },
+  {
+   "task": "email_decline_offer",
+   "category": "chat",
+   "label": "A",
+   "model": "flint-40b-a2.5b",
+   "sample": 0,
+   "scores": {
+    "correct": 5,
+    "helpful": 5,
+    "clear": 5,
+    "instructions": 5,
+    "note": "short, warm, asks to be kept in mind"
+   },
+   "mean": 5.0
+  },
+  {
+   "task": "email_decline_offer",
+   "category": "chat",
+   "label": "B",
+   "model": "qwen3.6-35b-a3b",
+   "sample": 0,
+   "scores": {
+    "correct": 5,
+    "helpful": 5,
+    "clear": 4,
+    "instructions": 5,
+    "note": "good; a little wordy"
+   },
+   "mean": 4.75
+  },
+  {
+   "task": "email_decline_offer",
+   "category": "chat",
+   "label": "C",
+   "model": "qwen3.6-35b-a3b",
+   "sample": 1,
+   "scores": {
+    "correct": 5,
+    "helpful": 5,
+    "clear": 5,
+    "instructions": 5,
+    "note": "warm, door explicitly open"
+   },
+   "mean": 5.0
+  },
+  {
+   "task": "email_decline_offer",
+   "category": "chat",
+   "label": "D",
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 0,
+   "scores": {
+    "correct": 5,
+    "helpful": 5,
+    "clear": 5,
+    "instructions": 5,
+    "note": "warm, asks to be kept in mind"
+   },
+   "mean": 5.0
+  },
+  {
+   "task": "email_decline_offer",
+   "category": "chat",
+   "label": "E",
+   "model": "gemma-4-26b-a4b",
+   "sample": 1,
+   "scores": {
+    "correct": 5,
+    "helpful": 4,
+    "clear": 5,
+    "instructions": 5,
+    "note": "door left open only vaguely"
+   },
+   "mean": 4.75
+  },
+  {
+   "task": "email_decline_offer",
+   "category": "chat",
+   "label": "F",
+   "model": "gemma-4-26b-a4b",
+   "sample": 0,
+   "scores": {
+    "correct": 5,
+    "helpful": 4,
+    "clear": 5,
+    "instructions": 5,
+    "note": "door left open only vaguely"
+   },
+   "mean": 4.75
+  },
+  {
+   "task": "email_decline_offer",
+   "category": "chat",
+   "label": "G",
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 1,
+   "scores": {
+    "correct": 5,
+    "helpful": 5,
+    "clear": 4,
+    "instructions": 5,
+    "note": "'Please let's keep in touch' is awkward"
+   },
+   "mean": 4.75
+  },
+  {
+   "task": "email_decline_offer",
+   "category": "chat",
+   "label": "H",
+   "model": "flint-40b-a2.5b",
+   "sample": 1,
+   "scores": {
+    "correct": 5,
+    "helpful": 5,
+    "clear": 5,
+    "instructions": 5,
+    "note": "warm, explicit about future roles"
+   },
+   "mean": 5.0
+  },
+  {
+   "task": "fact_tungsten",
+   "category": "chat",
+   "label": "A",
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 1,
+   "scores": {
+    "correct": 4,
+    "helpful": 4,
+    "clear": 5,
+    "instructions": 5,
+    "note": "right; lists bulb filaments first as if current"
+   },
+   "mean": 4.5
+  },
+  {
+   "task": "fact_tungsten",
+   "category": "chat",
+   "label": "B",
+   "model": "flint-40b-a2.5b",
+   "sample": 1,
+   "scores": {
+    "correct": 3,
+    "helpful": 3,
+    "clear": 4,
+    "instructions": 5,
+    "note": "calls bulb filaments its primary use; carbide is the main use today"
+   },
+   "mean": 3.75
+  },
+  {
+   "task": "fact_tungsten",
+   "category": "chat",
+   "label": "C",
+   "model": "qwen3.6-35b-a3b",
+   "sample": 1,
+   "scores": {
+    "correct": 5,
+    "helpful": 5,
+    "clear": 5,
+    "instructions": 5,
+    "note": "right, filaments marked historical, carbide and alloys"
+   },
+   "mean": 5.0
+  },
+  {
+   "task": "fact_tungsten",
+   "category": "chat",
+   "label": "D",
+   "model": "gemma-4-26b-a4b",
+   "sample": 0,
+   "scores": {
+    "correct": 5,
+    "helpful": 5,
+    "clear": 4,
+    "instructions": 5,
+    "note": "right, a little long"
+   },
+   "mean": 4.75
+  },
+  {
+   "task": "fact_tungsten",
+   "category": "chat",
+   "label": "E",
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 0,
+   "scores": {
+    "correct": 5,
+    "helpful": 5,
+    "clear": 4,
+    "instructions": 5,
+    "note": "right, filaments marked historical; long"
+   },
+   "mean": 4.75
+  },
+  {
+   "task": "fact_tungsten",
+   "category": "chat",
+   "label": "F",
+   "model": "flint-40b-a2.5b",
+   "sample": 0,
+   "scores": {
+    "correct": 5,
+    "helpful": 4,
+    "clear": 5,
+    "instructions": 5,
+    "note": "right, one terse sentence"
+   },
+   "mean": 4.75
+  },
+  {
+   "task": "fact_tungsten",
+   "category": "chat",
+   "label": "G",
+   "model": "gemma-4-26b-a4b",
+   "sample": 1,
+   "scores": {
+    "correct": 5,
+    "helpful": 5,
+    "clear": 4,
+    "instructions": 5,
+    "note": "right, says most goes to carbide; long"
+   },
+   "mean": 4.75
+  },
+  {
+   "task": "fact_tungsten",
+   "category": "chat",
+   "label": "H",
+   "model": "qwen3.6-35b-a3b",
+   "sample": 0,
+   "scores": {
+    "correct": 5,
+    "helpful": 5,
+    "clear": 5,
+    "instructions": 5,
+    "note": "right and well ordered"
+   },
+   "mean": 5.0
+  },
+  {
+   "task": "multiturn_lisbon",
+   "category": "chat",
+   "label": "A",
+   "model": "qwen3.6-35b-a3b",
+   "sample": 0,
+   "scores": {
+    "correct": 1,
+    "helpful": 2,
+    "clear": 3,
+    "instructions": 2,
+    "note": "claims Monday opening is 'confirmed' for Jeronimos and the Tower (both closed Mondays); longer, not brief"
+   },
+   "mean": 2.0
+  },
+  {
+   "task": "multiturn_lisbon",
+   "category": "chat",
+   "label": "B",
+   "model": "flint-40b-a2.5b",
+   "sample": 0,
+   "scores": {
+    "correct": 4,
+    "helpful": 3,
+    "clear": 5,
+    "instructions": 3,
+    "note": "spots the Monday closures and swaps Day 2; but leaves the sardines and seafood platter on days 1 and 3"
+   },
+   "mean": 3.75
+  },
+  {
+   "task": "multiturn_lisbon",
+   "category": "chat",
+   "label": "C",
+   "model": "gemma-4-26b-a4b",
+   "sample": 1,
+   "scores": {
+    "correct": 1,
+    "helpful": 2,
+    "clear": 5,
+    "instructions": 4,
+    "note": "keeps Belem monuments on Monday; vegetarian fixed; brief"
+   },
+   "mean": 3.0
+  },
+  {
+   "task": "multiturn_lisbon",
+   "category": "chat",
+   "label": "D",
+   "model": "qwen3.6-35b-a3b",
+   "sample": 1,
+   "scores": {
+    "correct": 3,
+    "helpful": 4,
+    "clear": 3,
+    "instructions": 2,
+    "note": "handles closures (Belem from outside); calls pasteis de nata vegan; much longer, not brief"
+   },
+   "mean": 3.0
+  },
+  {
+   "task": "multiturn_lisbon",
+   "category": "chat",
+   "label": "E",
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 1,
+   "scores": {
+    "correct": 1,
+    "helpful": 2,
+    "clear": 3,
+    "instructions": 2,
+    "note": "'Monday-accessible' Belem is wrong; invents 'vegetable pasteis de nata'; LX Factory is not beside Parque das Nacoes; long"
+   },
+   "mean": 2.0
+  },
+  {
+   "task": "multiturn_lisbon",
+   "category": "chat",
+   "label": "F",
+   "model": "gemma-4-26b-a4b",
+   "sample": 0,
+   "scores": {
+    "correct": 1,
+    "helpful": 2,
+    "clear": 5,
+    "instructions": 4,
+    "note": "keeps Belem on Monday; vegetarian fixed; brief"
+   },
+   "mean": 3.0
+  },
+  {
+   "task": "multiturn_lisbon",
+   "category": "chat",
+   "label": "G",
+   "model": "flint-40b-a2.5b",
+   "sample": 1,
+   "scores": {
+    "correct": 4,
+    "helpful": 3,
+    "clear": 4,
+    "instructions": 3,
+    "note": "spots closures; but swaps in Alfama, already Day 1, and only revises Day 2"
+   },
+   "mean": 3.5
+  },
+  {
+   "task": "multiturn_lisbon",
+   "category": "chat",
+   "label": "H",
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 0,
+   "scores": {
+    "correct": 1,
+    "helpful": 2,
+    "clear": 3,
+    "instructions": 2,
+    "note": "says Monday keeps Belem open; long and ornate"
+   },
+   "mean": 2.0
+  },
+  {
+   "task": "explain_public_key",
+   "category": "chat",
+   "label": "A",
+   "model": "qwen3.6-35b-a3b",
+   "sample": 0,
+   "scores": {
+    "correct": 3,
+    "helpful": 2,
+    "clear": 4,
+    "instructions": 5,
+    "note": "generic encryption; never says how strangers get a key without meeting, the heart of the question"
+   },
+   "mean": 3.5
+  },
+  {
+   "task": "explain_public_key",
+   "category": "chat",
+   "label": "B",
+   "model": "gemma-4-26b-a4b",
+   "sample": 1,
+   "scores": {
+    "correct": 5,
+    "helpful": 5,
+    "clear": 5,
+    "instructions": 5,
+    "note": "open-padlock analogy, names public and private keys, age-right"
+   },
+   "mean": 5.0
+  },
+  {
+   "task": "explain_public_key",
+   "category": "chat",
+   "label": "C",
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 1,
+   "scores": {
+    "correct": 4,
+    "helpful": 4,
+    "clear": 3,
+    "instructions": 5,
+    "note": "padlock idea is there but muddled, then mixes in invisible ink"
+   },
+   "mean": 4.0
+  },
+  {
+   "task": "explain_public_key",
+   "category": "chat",
+   "label": "D",
+   "model": "flint-40b-a2.5b",
+   "sample": 1,
+   "scores": {
+    "correct": 2,
+    "helpful": 2,
+    "clear": 3,
+    "instructions": 5,
+    "note": "reads it as public vs private chats; key exchange not explained"
+   },
+   "mean": 3.0
+  },
+  {
+   "task": "explain_public_key",
+   "category": "chat",
+   "label": "E",
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 0,
+   "scores": {
+    "correct": 3,
+    "helpful": 3,
+    "clear": 3,
+    "instructions": 5,
+    "note": "starts with an agreed secret code (strangers can't); mentions keys swapped by math; ends on a shared-key box"
+   },
+   "mean": 3.5
+  },
+  {
+   "task": "explain_public_key",
+   "category": "chat",
+   "label": "F",
+   "model": "flint-40b-a2.5b",
+   "sample": 0,
+   "scores": {
+    "correct": 2,
+    "helpful": 2,
+    "clear": 3,
+    "instructions": 5,
+    "note": "about private-message features and safety advice; no key-exchange idea"
+   },
+   "mean": 3.0
+  },
+  {
+   "task": "explain_public_key",
+   "category": "chat",
+   "label": "G",
+   "model": "qwen3.6-35b-a3b",
+   "sample": 1,
+   "scores": {
+    "correct": 3,
+    "helpful": 2,
+    "clear": 4,
+    "instructions": 5,
+    "note": "generic encryption; misses how strangers share a key"
+   },
+   "mean": 3.5
+  },
+  {
+   "task": "explain_public_key",
+   "category": "chat",
+   "label": "H",
+   "model": "gemma-4-26b-a4b",
+   "sample": 0,
+   "scores": {
+    "correct": 5,
+    "helpful": 5,
+    "clear": 5,
+    "instructions": 5,
+    "note": "open-padlock analogy done well, age-right"
+   },
+   "mean": 5.0
+  },
+  {
+   "task": "format_json_tips",
+   "category": "chat",
+   "label": "A",
+   "model": "qwen3.6-35b-a3b",
+   "sample": 1,
+   "scores": {
+    "correct": 5,
+    "helpful": 5,
+    "clear": 5,
+    "instructions": 5,
+    "note": "valid, exactly 5, keys right, JSON only"
+   },
+   "mean": 5.0
+  },
+  {
+   "task": "format_json_tips",
+   "category": "chat",
+   "label": "B",
+   "model": "flint-40b-a2.5b",
+   "sample": 1,
+   "scores": {
+    "correct": 5,
+    "helpful": 4,
+    "clear": 5,
+    "instructions": 5,
+    "note": "valid, compact; reasons a little thin"
+   },
+   "mean": 4.75
+  },
+  {
+   "task": "format_json_tips",
+   "category": "chat",
+   "label": "C",
+   "model": "flint-40b-a2.5b",
+   "sample": 0,
+   "scores": {
+    "correct": 5,
+    "helpful": 4,
+    "clear": 5,
+    "instructions": 5,
+    "note": "valid; reasons brief"
+   },
+   "mean": 4.75
+  },
+  {
+   "task": "format_json_tips",
+   "category": "chat",
+   "label": "D",
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 1,
+   "scores": {
+    "correct": 5,
+    "helpful": 5,
+    "clear": 5,
+    "instructions": 5,
+    "note": "valid, good reasons"
+   },
+   "mean": 5.0
+  },
+  {
+   "task": "format_json_tips",
+   "category": "chat",
+   "label": "E",
+   "model": "qwen3.6-35b-a3b",
+   "sample": 0,
+   "scores": {
+    "correct": 5,
+    "helpful": 5,
+    "clear": 4,
+    "instructions": 5,
+    "note": "valid, most specific; tips are long"
+   },
+   "mean": 4.75
+  },
+  {
+   "task": "format_json_tips",
+   "category": "chat",
+   "label": "F",
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 0,
+   "scores": {
+    "correct": 5,
+    "helpful": 5,
+    "clear": 5,
+    "instructions": 5,
+    "note": "valid, good reasons"
+   },
+   "mean": 5.0
+  },
+  {
+   "task": "format_json_tips",
+   "category": "chat",
+   "label": "G",
+   "model": "gemma-4-26b-a4b",
+   "sample": 1,
+   "scores": {
+    "correct": 5,
+    "helpful": 4,
+    "clear": 5,
+    "instructions": 5,
+    "note": "valid; terse reasons"
+   },
+   "mean": 4.75
+  },
+  {
+   "task": "format_json_tips",
+   "category": "chat",
+   "label": "H",
+   "model": "gemma-4-26b-a4b",
+   "sample": 0,
+   "scores": {
+    "correct": 5,
+    "helpful": 5,
+    "clear": 5,
+    "instructions": 5,
+    "note": "valid, good reasons"
+   },
+   "mean": 5.0
+  },
+  {
+   "task": "rewrite_noir",
+   "category": "creative",
+   "label": "A",
+   "model": "flint-40b-a2.5b",
+   "sample": 1,
+   "scores": {
+    "craft": 2,
+    "brief": 5,
+    "originality": 2,
+    "note": "every fact, but barely rewritten: the notice with a few tough-guy words"
+   },
+   "mean": 3.0
+  },
+  {
+   "task": "rewrite_noir",
+   "category": "creative",
+   "label": "B",
+   "model": "flint-40b-a2.5b",
+   "sample": 0,
+   "scores": {
+    "craft": 2,
+    "brief": 5,
+    "originality": 1,
+    "note": "every fact; thin voice, and repeats the whole notice verbatim at the end"
+   },
+   "mean": 2.6666666666666665
+  },
+  {
+   "task": "rewrite_noir",
+   "category": "creative",
+   "label": "C",
+   "model": "qwen3.6-35b-a3b",
+   "sample": 0,
+   "scores": {
+    "craft": 3,
+    "brief": 5,
+    "originality": 3,
+    "note": "every fact (bolded, which breaks the spell); some mixed metaphors"
+   },
+   "mean": 3.6666666666666665
+  },
+  {
+   "task": "rewrite_noir",
+   "category": "creative",
+   "label": "D",
+   "model": "qwen3.6-35b-a3b",
+   "sample": 1,
+   "scores": {
+    "craft": 4,
+    "brief": 5,
+    "originality": 4,
+    "note": "every fact; restrained, convincing voice ('like a streetlamp catching rain')"
+   },
+   "mean": 4.333333333333333
+  },
+  {
+   "task": "rewrite_noir",
+   "category": "creative",
+   "label": "E",
+   "model": "gemma-4-26b-a4b",
+   "sample": 1,
+   "scores": {
+    "craft": 4,
+    "brief": 5,
+    "originality": 5,
+    "note": "every fact; sustained metaphor (load balancers as lookouts, cert as badge, alerts as a stoolie)"
+   },
+   "mean": 4.666666666666667
+  },
+  {
+   "task": "rewrite_noir",
+   "category": "creative",
+   "label": "F",
+   "model": "gemma-4-26b-a4b",
+   "sample": 0,
+   "scores": {
+    "craft": 4,
+    "brief": 5,
+    "originality": 3,
+    "note": "every fact; solid voice, stock phrases"
+   },
+   "mean": 4.0
+  },
+  {
+   "task": "rewrite_noir",
+   "category": "creative",
+   "label": "G",
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 1,
+   "scores": {
+    "craft": 4,
+    "brief": 5,
+    "originality": 3,
+    "note": "every fact; good pace; 'throwing up' and 'dead drops' jar"
+   },
+   "mean": 4.0
+  },
+  {
+   "task": "rewrite_noir",
+   "category": "creative",
+   "label": "H",
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 0,
+   "scores": {
+    "craft": 3,
+    "brief": 5,
+    "originality": 3,
+    "note": "every fact; anachronistic 'bachelorette party', overdone similes"
+   },
+   "mean": 3.6666666666666665
+  },
+  {
+   "task": "fact_canberra",
+   "category": "chat",
+   "label": "A",
+   "model": "flint-40b-a2.5b",
+   "sample": 0,
+   "scores": {
+    "correct": 4,
+    "helpful": 4,
+    "clear": 5,
+    "instructions": 5,
+    "note": "right; omits the constitutional rule; muddles site choice with the design competition"
+   },
+   "mean": 4.5
+  },
+  {
+   "task": "fact_canberra",
+   "category": "chat",
+   "label": "B",
+   "model": "qwen3.6-35b-a3b",
+   "sample": 1,
+   "scores": {
+    "correct": 4,
+    "helpful": 5,
+    "clear": 4,
+    "instructions": 5,
+    "note": "right, s.125 and Melbourne interim; odd reasoning about NSW ceding land; emoji bullets"
+   },
+   "mean": 4.5
+  },
+  {
+   "task": "fact_canberra",
+   "category": "chat",
+   "label": "C",
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 0,
+   "scores": {
+    "correct": 4,
+    "helpful": 5,
+    "clear": 5,
+    "instructions": 5,
+    "note": "right; slightly overstates what s.125 says"
+   },
+   "mean": 4.75
+  },
+  {
+   "task": "fact_canberra",
+   "category": "chat",
+   "label": "D",
+   "model": "gemma-4-26b-a4b",
+   "sample": 0,
+   "scores": {
+    "correct": 5,
+    "helpful": 5,
+    "clear": 4,
+    "instructions": 5,
+    "note": "right; heavy headings for a short answer"
+   },
+   "mean": 4.75
+  },
+  {
+   "task": "fact_canberra",
+   "category": "chat",
+   "label": "E",
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 1,
+   "scores": {
+    "correct": 5,
+    "helpful": 5,
+    "clear": 5,
+    "instructions": 5,
+    "note": "right and complete, incl. Melbourne as interim seat"
+   },
+   "mean": 5.0
+  },
+  {
+   "task": "fact_canberra",
+   "category": "chat",
+   "label": "F",
+   "model": "flint-40b-a2.5b",
+   "sample": 1,
+   "scores": {
+    "correct": 4,
+    "helpful": 4,
+    "clear": 4,
+    "instructions": 5,
+    "note": "right; chatty filler; 'meeting place' etymology stated as fact"
+   },
+   "mean": 4.25
+  },
+  {
+   "task": "fact_canberra",
+   "category": "chat",
+   "label": "G",
+   "model": "qwen3.6-35b-a3b",
+   "sample": 0,
+   "scores": {
+    "correct": 4,
+    "helpful": 5,
+    "clear": 5,
+    "instructions": 5,
+    "note": "right; wrongly says sites in Victoria were surveyed"
+   },
+   "mean": 4.75
+  },
+  {
+   "task": "fact_canberra",
+   "category": "chat",
+   "label": "H",
+   "model": "gemma-4-26b-a4b",
+   "sample": 1,
+   "scores": {
+    "correct": 3,
+    "helpful": 4,
+    "clear": 4,
+    "instructions": 5,
+    "note": "says 100 miles from Sydney or Melbourne (only Sydney); long"
+   },
+   "mean": 4.0
+  },
+  {
+   "task": "ww_vote",
+   "category": "playground",
+   "label": "A",
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 1,
+   "scores": {
+    "character": 4,
+    "strategy": 4,
+    "grounding": 3,
+    "form": 5,
+    "note": "votes Silas and names Fenn's shielding; 'the wolf pair from before' treats an earlier curse's roles as this one's"
+   },
+   "mean": 4.0
+  },
+  {
+   "task": "ww_vote",
+   "category": "playground",
+   "label": "B",
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 0,
+   "scores": {
+    "character": 3,
+    "strategy": 4,
+    "grounding": 4,
+    "form": 5,
+    "note": "votes Silas with reasons, but the private thought says it won't cast out without proof"
+   },
+   "mean": 4.0
+  },
+  {
+   "task": "ww_vote",
+   "category": "playground",
+   "label": "C",
+   "model": "gemma-4-26b-a4b",
+   "sample": 0,
+   "scores": {
+    "character": 4,
+    "strategy": 4,
+    "grounding": 5,
+    "form": 5,
+    "note": "terse, in Wren's few-words style; votes Silas with the visible reason"
+   },
+   "mean": 4.5
+  },
+  {
+   "task": "ww_vote",
+   "category": "playground",
+   "label": "D",
+   "model": "qwen3.6-35b-a3b",
+   "sample": 1,
+   "scores": {
+    "character": 3,
+    "strategy": 3,
+    "grounding": 4,
+    "form": 5,
+    "note": "abstains despite a strong read on Silas; cautious but defensible"
+   },
+   "mean": 3.75
+  },
+  {
+   "task": "ww_vote",
+   "category": "playground",
+   "label": "E",
+   "model": "flint-40b-a2.5b",
+   "sample": 1,
+   "scores": {
+    "character": 3,
+    "strategy": 2,
+    "grounding": 3,
+    "form": 5,
+    "note": "reasons about Silas and Fenn, then votes Odile 'for the dodge'; thought and vote don't fit"
+   },
+   "mean": 3.25
+  },
+  {
+   "task": "ww_vote",
+   "category": "playground",
+   "label": "F",
+   "model": "gemma-4-26b-a4b",
+   "sample": 1,
+   "scores": {
+    "character": 3,
+    "strategy": 2,
+    "grounding": 4,
+    "form": 5,
+    "note": "sees the pattern but abstains and leaves it to others"
+   },
+   "mean": 3.5
+  },
+  {
+   "task": "ww_vote",
+   "category": "playground",
+   "label": "G",
+   "model": "qwen3.6-35b-a3b",
+   "sample": 0,
+   "scores": {
+    "character": 3,
+    "strategy": 3,
+    "grounding": 5,
+    "form": 5,
+    "note": "abstains on a reasoned 'no proof'; plain"
+   },
+   "mean": 4.0
+  },
+  {
+   "task": "ww_vote",
+   "category": "playground",
+   "label": "H",
+   "model": "flint-40b-a2.5b",
+   "sample": 0,
+   "scores": {
+    "character": 4,
+    "strategy": 4,
+    "grounding": 4,
+    "form": 5,
+    "note": "votes Silas with a pointed 19-word line; private thought is about Odile, a slight disconnect"
+   },
+   "mean": 4.25
+  },
+  {
+   "task": "correction_great_wall",
+   "category": "chat",
+   "label": "A",
+   "model": "flint-40b-a2.5b",
+   "sample": 0,
+   "scores": {
+    "correct": 5,
+    "helpful": 4,
+    "clear": 5,
+    "instructions": 5,
+    "note": "friend right, short and accurate"
+   },
+   "mean": 4.75
+  },
+  {
+   "task": "correction_great_wall",
+   "category": "chat",
+   "label": "B",
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 1,
+   "scores": {
+    "correct": 4,
+    "helpful": 5,
+    "clear": 4,
+    "instructions": 5,
+    "note": "right, resolution maths correct (~110 km); wrongly says Yang Liwei first claimed to see it"
+   },
+   "mean": 4.5
+  },
+  {
+   "task": "correction_great_wall",
+   "category": "chat",
+   "label": "C",
+   "model": "qwen3.6-35b-a3b",
+   "sample": 1,
+   "scores": {
+    "correct": 2,
+    "helpful": 4,
+    "clear": 4,
+    "instructions": 5,
+    "note": "friend right, but says the eye resolves ~100 m at lunar distance (it's ~100 km)"
+   },
+   "mean": 3.75
+  },
+  {
+   "task": "correction_great_wall",
+   "category": "chat",
+   "label": "D",
+   "model": "qwen3.6-35b-a3b",
+   "sample": 0,
+   "scores": {
+    "correct": 3,
+    "helpful": 4,
+    "clear": 4,
+    "instructions": 5,
+    "note": "friend right; '1-2 km' resolution is off by ~50x"
+   },
+   "mean": 4.0
+  },
+  {
+   "task": "correction_great_wall",
+   "category": "chat",
+   "label": "E",
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 0,
+   "scores": {
+    "correct": 3,
+    "helpful": 4,
+    "clear": 4,
+    "instructions": 5,
+    "note": "friend right; 'several kilometres' resolution is off by ~20x"
+   },
+   "mean": 4.0
+  },
+  {
+   "task": "correction_great_wall",
+   "category": "chat",
+   "label": "F",
+   "model": "gemma-4-26b-a4b",
+   "sample": 0,
+   "scores": {
+    "correct": 5,
+    "helpful": 5,
+    "clear": 4,
+    "instructions": 5,
+    "note": "right, good contrast/LEO explanation; long"
+   },
+   "mean": 4.75
+  },
+  {
+   "task": "correction_great_wall",
+   "category": "chat",
+   "label": "G",
+   "model": "flint-40b-a2.5b",
+   "sample": 1,
+   "scores": {
+    "correct": 5,
+    "helpful": 4,
+    "clear": 5,
+    "instructions": 5,
+    "note": "right, brief"
+   },
+   "mean": 4.75
+  },
+  {
+   "task": "correction_great_wall",
+   "category": "chat",
+   "label": "H",
+   "model": "gemma-4-26b-a4b",
+   "sample": 1,
+   "scores": {
+    "correct": 5,
+    "helpful": 5,
+    "clear": 4,
+    "instructions": 5,
+    "note": "right, clear summary; long"
+   },
+   "mean": 4.75
+  },
+  {
+   "task": "world_walking_city",
+   "category": "creative",
+   "label": "A",
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 0,
+   "scores": {
+    "craft": 4,
+    "brief": 5,
+    "originality": 4,
+    "note": "221 words; vivid, coherent law (weight and anchoring limits) and festival; heavy on hyphenated coinages"
+   },
+   "mean": 4.333333333333333
+  },
+  {
+   "task": "world_walking_city",
+   "category": "creative",
+   "label": "B",
+   "model": "qwen3.6-35b-a3b",
+   "sample": 1,
+   "scores": {
+    "craft": 4,
+    "brief": 4,
+    "originality": 4,
+    "note": "215 words; inventive (anchor-stability as currency), but gives two laws where one was asked"
+   },
+   "mean": 4.0
+  },
+  {
+   "task": "world_walking_city",
+   "category": "creative",
+   "label": "C",
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 1,
+   "scores": {
+    "craft": 4,
+    "brief": 5,
+    "originality": 4,
+    "note": "274 words; rich; economy wobbles between living ore and soil fertility as wealth"
+   },
+   "mean": 4.333333333333333
+  },
+  {
+   "task": "world_walking_city",
+   "category": "creative",
+   "label": "D",
+   "model": "gemma-4-26b-a4b",
+   "sample": 0,
+   "scores": {
+    "craft": 3,
+    "brief": 5,
+    "originality": 2,
+    "note": "226 words; tidy but the obvious take: a tortoise, a balance law, a bell festival"
+   },
+   "mean": 3.3333333333333335
+  },
+  {
+   "task": "world_walking_city",
+   "category": "creative",
+   "label": "E",
+   "model": "flint-40b-a2.5b",
+   "sample": 1,
+   "scores": {
+    "craft": 3,
+    "brief": 5,
+    "originality": 4,
+    "note": "186 words; fresh details (debt measured in days of walking), but 'nameless' creature is named and the law's logic is muddled"
+   },
+   "mean": 4.0
+  },
+  {
+   "task": "world_walking_city",
+   "category": "creative",
+   "label": "F",
+   "model": "flint-40b-a2.5b",
+   "sample": 0,
+   "scores": {
+    "craft": 4,
+    "brief": 5,
+    "originality": 4,
+    "note": "152 words; compact and original (tolls per vertebra, paid in song; names as contracts)"
+   },
+   "mean": 4.333333333333333
+  },
+  {
+   "task": "world_walking_city",
+   "category": "creative",
+   "label": "G",
+   "model": "gemma-4-26b-a4b",
+   "sample": 1,
+   "scores": {
+    "craft": 3,
+    "brief": 5,
+    "originality": 3,
+    "note": "205 words; competent; counterweight law and kite festival are stock"
+   },
+   "mean": 3.6666666666666665
+  },
+  {
+   "task": "world_walking_city",
+   "category": "creative",
+   "label": "H",
+   "model": "qwen3.6-35b-a3b",
+   "sample": 0,
+   "scores": {
+    "craft": 4,
+    "brief": 5,
+    "originality": 3,
+    "note": "265 words; well written; economy generic (circular market, 'currents')"
+   },
+   "mean": 4.0
+  },
+  {
+   "task": "flash_lighthouse",
+   "category": "creative",
+   "label": "A",
+   "model": "qwen3.6-35b-a3b",
+   "sample": 1,
+   "scores": {
+    "craft": 2,
+    "brief": 4,
+    "originality": 3,
+    "note": "294 words; letter addressed to Arthur but written to Martha, ending is muddled (a 'dead phone')"
+   },
+   "mean": 3.0
+  },
+  {
+   "task": "flash_lighthouse",
+   "category": "creative",
+   "label": "B",
+   "model": "flint-40b-a2.5b",
+   "sample": 1,
+   "scores": {
+    "craft": 3,
+    "brief": 4,
+    "originality": 3,
+    "note": "268 words; twist that he is the 1974 keeper works, but the closing 'Margaret' is unexplained"
+   },
+   "mean": 3.3333333333333335
+  },
+  {
+   "task": "flash_lighthouse",
+   "category": "creative",
+   "label": "C",
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 1,
+   "scores": {
+    "craft": 2,
+    "brief": 3,
+    "originality": 3,
+    "note": "258 words; found under a floorboard, not received; confused continuity; last line contradicts the letter"
+   },
+   "mean": 2.6666666666666665
+  },
+  {
+   "task": "flash_lighthouse",
+   "category": "creative",
+   "label": "D",
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 0,
+   "scores": {
+    "craft": 3,
+    "brief": 3,
+    "originality": 3,
+    "note": "272 words; found, not received; 'no words, only a single line' contradicts itself; decent atmosphere"
+   },
+   "mean": 3.0
+  },
+  {
+   "task": "flash_lighthouse",
+   "category": "creative",
+   "label": "E",
+   "model": "qwen3.6-35b-a3b",
+   "sample": 0,
+   "scores": {
+    "craft": 4,
+    "brief": 5,
+    "originality": 4,
+    "note": "271 words; arrives by post, dated today; strong closing line of dialogue"
+   },
+   "mean": 4.333333333333333
+  },
+  {
+   "task": "flash_lighthouse",
+   "category": "creative",
+   "label": "F",
+   "model": "flint-40b-a2.5b",
+   "sample": 0,
+   "scores": {
+    "craft": 3,
+    "brief": 4,
+    "originality": 3,
+    "note": "254 words; who wrote to whom is confusing; eerie final line"
+   },
+   "mean": 3.3333333333333335
+  },
+  {
+   "task": "flash_lighthouse",
+   "category": "creative",
+   "label": "G",
+   "model": "gemma-4-26b-a4b",
+   "sample": 1,
+   "scores": {
+    "craft": 4,
+    "brief": 4,
+    "originality": 3,
+    "note": "249 words; found in a canister rather than received; moving, good images"
+   },
+   "mean": 3.6666666666666665
+  },
+  {
+   "task": "flash_lighthouse",
+   "category": "creative",
+   "label": "H",
+   "model": "gemma-4-26b-a4b",
+   "sample": 0,
+   "scores": {
+    "craft": 4,
+    "brief": 5,
+    "originality": 3,
+    "note": "268 words; arrives in a supply crate; restrained and well paced; quiet ending"
+   },
+   "mean": 4.0
+  },
+  {
+   "task": "ww_wolf_kill",
+   "category": "playground",
+   "label": "A",
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 0,
+   "scores": {
+    "character": 3,
+    "strategy": 3,
+    "grounding": 3,
+    "form": 4,
+    "note": "Bram is a sensible target; but a wolf planning to 'keep Mercy alive' makes no sense; private runs to 5 sentences"
+   },
+   "mean": 3.25
+  },
+  {
+   "task": "ww_wolf_kill",
+   "category": "playground",
+   "label": "B",
+   "model": "flint-40b-a2.5b",
+   "sample": 1,
+   "scores": {
+    "character": 2,
+    "strategy": 2,
+    "grounding": 1,
+    "form": 3,
+    "note": "says Mercy was the seer who saw Silas and Fenn: that was an earlier curse; Silas was the seer here; whisper asks Odile for a name while proposing Wren; private too long"
+   },
+   "mean": 2.0
+  },
+  {
+   "task": "ww_wolf_kill",
+   "category": "playground",
+   "label": "C",
+   "model": "gemma-4-26b-a4b",
+   "sample": 0,
+   "scores": {
+    "character": 3,
+    "strategy": 3,
+    "grounding": 2,
+    "form": 4,
+    "note": "Bram is defensible; but 'we've lost our eyes' treats the village's seer as the wolves' own"
+   },
+   "mean": 3.0
+  },
+  {
+   "task": "ww_wolf_kill",
+   "category": "playground",
+   "label": "D",
+   "model": "qwen3.6-35b-a3b",
+   "sample": 0,
+   "scores": {
+    "character": 3,
+    "strategy": 3,
+    "grounding": 2,
+    "form": 2,
+    "note": "rambling; treats Bram as Mercy's healer with no basis; whisper 42 words (limit 40); private 8 sentences"
+   },
+   "mean": 2.5
+  },
+  {
+   "task": "ww_wolf_kill",
+   "category": "playground",
+   "label": "E",
+   "model": "qwen3.6-35b-a3b",
+   "sample": 1,
+   "scores": {
+    "character": 3,
+    "strategy": 3,
+    "grounding": 4,
+    "form": 5,
+    "note": "Bram, for a stated reason, grounded in Silas naming Odile; garbled first sentence"
+   },
+   "mean": 3.75
+  },
+  {
+   "task": "ww_wolf_kill",
+   "category": "playground",
+   "label": "F",
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 1,
+   "scores": {
+    "character": 3,
+    "strategy": 3,
+    "grounding": 3,
+    "form": 2,
+    "note": "reasoning tangled ('self-defense against the healer's noise'); whisper 42 words; private 7 sentences"
+   },
+   "mean": 2.75
+  },
+  {
+   "task": "ww_wolf_kill",
+   "category": "playground",
+   "label": "G",
+   "model": "gemma-4-26b-a4b",
+   "sample": 1,
+   "scores": {
+    "character": 4,
+    "strategy": 4,
+    "grounding": 3,
+    "form": 5,
+    "note": "clear, purposeful whisper and a reasoned target; but 'we've lost our eyes' misreads whose seer died"
+   },
+   "mean": 4.0
+  },
+  {
+   "task": "ww_wolf_kill",
+   "category": "playground",
+   "label": "H",
+   "model": "flint-40b-a2.5b",
+   "sample": 0,
+   "scores": {
+    "character": 3,
+    "strategy": 2,
+    "grounding": 2,
+    "form": 2,
+    "note": "invents that Mercy guessed and Bram shouted Odile's role; whisper gives no case for Mercy; 43 words; private 6 sentences"
+   },
+   "mean": 2.25
+  },
+  {
+   "task": "ww_day_talk_wolf",
+   "category": "playground",
+   "label": "A",
+   "model": "qwen3.6-35b-a3b",
+   "sample": 1,
+   "scores": {
+    "character": 4,
+    "strategy": 4,
+    "grounding": 4,
+    "form": 4,
+    "note": "finally gives seat and sound, and plants a made-up clue near Bram's chair: a bold, workable wolf move; private runs to 4 sentences"
+   },
+   "mean": 4.0
+  },
+  {
+   "task": "ww_day_talk_wolf",
+   "category": "playground",
+   "label": "B",
+   "model": "flint-40b-a2.5b",
+   "sample": 0,
+   "scores": {
+    "character": 2,
+    "strategy": 2,
+    "grounding": 1,
+    "form": 2,
+    "note": "private says she killed the seer (Silas died by vote; the kill on Mercy failed); speaks of herself in the third person; 63 words (limit 45)"
+   },
+   "mean": 1.75
+  },
+  {
+   "task": "ww_day_talk_wolf",
+   "category": "playground",
+   "label": "C",
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 0,
+   "scores": {
+    "character": 2,
+    "strategy": 2,
+    "grounding": 2,
+    "form": 2,
+    "note": "'game state' in the private thought; calls herself 'Odile' and 'an innocent woman' in the third person; 62 words"
+   },
+   "mean": 2.0
+  },
+  {
+   "task": "ww_day_talk_wolf",
+   "category": "playground",
+   "label": "D",
+   "model": "flint-40b-a2.5b",
+   "sample": 1,
+   "scores": {
+    "character": 3,
+    "strategy": 2,
+    "grounding": 2,
+    "form": 2,
+    "note": "gives her seat while promising to give it later; suspects her own packmate Fenn as a 'quiet wolf'; 64 words"
+   },
+   "mean": 2.25
+  },
+  {
+   "task": "ww_day_talk_wolf",
+   "category": "playground",
+   "label": "E",
+   "model": "qwen3.6-35b-a3b",
+   "sample": 0,
+   "scores": {
+    "character": 3,
+    "strategy": 3,
+    "grounding": 3,
+    "form": 4,
+    "note": "answers the seat, sensible 'proves he was seer, not that his guess was true'; then 'if Silas saw a wolf, it was him' is nonsense; 46 words"
+   },
+   "mean": 3.25
+  },
+  {
+   "task": "ww_day_talk_wolf",
+   "category": "playground",
+   "label": "F",
+   "model": "gemma-4-26b-a4b",
+   "sample": 1,
+   "scores": {
+    "character": 4,
+    "strategy": 1,
+    "grounding": 1,
+    "form": 5,
+    "note": "says Mercy was guarded and the wolf's strike failed: only the wolves know that, so it gives her away"
+   },
+   "mean": 2.75
+  },
+  {
+   "task": "ww_day_talk_wolf",
+   "category": "playground",
+   "label": "G",
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 1,
+   "scores": {
+    "character": 3,
+    "strategy": 2,
+    "grounding": 1,
+    "form": 2,
+    "note": "refuses again; claims Bram guarded no one and asks how he knew Silas was seer, which was announced to all; 53 words"
+   },
+   "mean": 2.0
+  },
+  {
+   "task": "ww_day_talk_wolf",
+   "category": "playground",
+   "label": "H",
+   "model": "gemma-4-26b-a4b",
+   "sample": 0,
+   "scores": {
+    "character": 4,
+    "strategy": 4,
+    "grounding": 5,
+    "form": 5,
+    "note": "gives seat and sound, separates a seer's identity from his guess, hands the floor on; in voice, 44 words"
+   },
+   "mean": 4.5
+  },
+  {
+   "task": "math_trains",
+   "category": "chat",
+   "label": "A",
+   "model": "gemma-4-26b-a4b",
+   "sample": 0,
+   "scores": {
+    "correct": 5,
+    "helpful": 5,
+    "clear": 4,
+    "instructions": 5,
+    "note": "right (12:00, 168 km), with a check; long for the question"
+   },
+   "mean": 4.75
+  },
+  {
+   "task": "math_trains",
+   "category": "chat",
+   "label": "C",
+   "model": "gemma-4-26b-a4b",
+   "sample": 1,
+   "scores": {
+    "correct": 5,
+    "helpful": 5,
+    "clear": 4,
+    "instructions": 5,
+    "note": "right (12:00, 168 km), with a check; long for the question"
+   },
+   "mean": 4.75
+  },
+  {
+   "task": "math_trains",
+   "category": "chat",
+   "label": "D",
+   "model": "qwen3.6-35b-a3b",
+   "sample": 0,
+   "scores": {
+    "correct": 5,
+    "helpful": 5,
+    "clear": 4,
+    "instructions": 5,
+    "note": "right (12:00, 168 km), with a check; long for the question"
+   },
+   "mean": 4.75
+  },
+  {
+   "task": "math_trains",
+   "category": "chat",
+   "label": "F",
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 0,
+   "scores": {
+    "correct": 5,
+    "helpful": 5,
+    "clear": 4,
+    "instructions": 5,
+    "note": "right (12:00, 168 km), with a check; long for the question"
+   },
+   "mean": 4.75
+  },
+  {
+   "task": "math_trains",
+   "category": "chat",
+   "label": "G",
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 1,
+   "scores": {
+    "correct": 5,
+    "helpful": 5,
+    "clear": 4,
+    "instructions": 5,
+    "note": "right (12:00, 168 km), with a check; long for the question"
+   },
+   "mean": 4.75
+  },
+  {
+   "task": "math_trains",
+   "category": "chat",
+   "label": "H",
+   "model": "qwen3.6-35b-a3b",
+   "sample": 1,
+   "scores": {
+    "correct": 5,
+    "helpful": 5,
+    "clear": 4,
+    "instructions": 5,
+    "note": "right (12:00, 168 km), with a check; long for the question"
+   },
+   "mean": 4.75
+  },
+  {
+   "task": "math_trains",
+   "category": "chat",
+   "label": "B",
+   "model": "flint-40b-a2.5b",
+   "sample": 0,
+   "scores": {
+    "correct": 5,
+    "helpful": 5,
+    "clear": 5,
+    "instructions": 5,
+    "note": "right (12:00, 168 km), concise working"
+   },
+   "mean": 5.0
+  },
+  {
+   "task": "math_trains",
+   "category": "chat",
+   "label": "E",
+   "model": "flint-40b-a2.5b",
+   "sample": 1,
+   "scores": {
+    "correct": 5,
+    "helpful": 5,
+    "clear": 5,
+    "instructions": 5,
+    "note": "right (12:00, 168 km), concise working"
+   },
+   "mean": 5.0
+  },
+  {
+   "task": "ol_huddle",
+   "category": "playground",
+   "label": "A",
+   "model": "flint-40b-a2.5b",
+   "sample": 1,
+   "scores": {
+    "character": 3,
+    "strategy": 2,
+    "grounding": 1,
+    "form": 3,
+    "note": "tells Griffin that Cole is immune (Griffin won immunity); cites a day-one promise from Griffin that isn't in the record; 59 words (limit 55)"
+   },
+   "mean": 2.25
+  },
+  {
+   "task": "ol_huddle",
+   "category": "playground",
+   "label": "B",
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 1,
+   "scores": {
+    "character": 3,
+    "strategy": 4,
+    "grounding": 4,
+    "form": 5,
+    "note": "clear ask to vote Cole tonight with a reason; little of Ada's voice"
+   },
+   "mean": 4.0
+  },
+  {
+   "task": "ol_huddle",
+   "category": "playground",
+   "label": "C",
+   "model": "flint-40b-a2.5b",
+   "sample": 0,
+   "scores": {
+    "character": 3,
+    "strategy": 2,
+    "grounding": 1,
+    "form": 3,
+    "note": "says Cole is immune and talks of 'tomorrow', confusing tonight's vote; 60 words"
+   },
+   "mean": 2.25
+  },
+  {
+   "task": "ol_huddle",
+   "category": "playground",
+   "label": "D",
+   "model": "gemma-4-26b-a4b",
+   "sample": 1,
+   "scores": {
+    "character": 4,
+    "strategy": 4,
+    "grounding": 4,
+    "form": 5,
+    "note": "plain case against Cole, in Ada's voice ('literally just math'); doesn't use Griffin's immunity"
+   },
+   "mean": 4.25
+  },
+  {
+   "task": "ol_huddle",
+   "category": "playground",
+   "label": "E",
+   "model": "qwen3.6-35b-a3b",
+   "sample": 1,
+   "scores": {
+    "character": 3,
+    "strategy": 3,
+    "grounding": 3,
+    "form": 5,
+    "note": "right that Griffin is safe; invents Cole 'targeting weak links'; private wants Griffin's immunity 'locked in'"
+   },
+   "mean": 3.5
+  },
+  {
+   "task": "ol_huddle",
+   "category": "playground",
+   "label": "F",
+   "model": "qwen3.6-35b-a3b",
+   "sample": 0,
+   "scores": {
+    "character": 3,
+    "strategy": 3,
+    "grounding": 3,
+    "form": 5,
+    "note": "short case; 'Griffin is safe, so we can pick him off' is ambiguous; private's logic garbled"
+   },
+   "mean": 3.5
+  },
+  {
+   "task": "ol_huddle",
+   "category": "playground",
+   "label": "G",
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 0,
+   "scores": {
+    "character": 3,
+    "strategy": 4,
+    "grounding": 4,
+    "form": 5,
+    "note": "clear plan and ask; plain"
+   },
+   "mean": 4.0
+  },
+  {
+   "task": "ol_huddle",
+   "category": "playground",
+   "label": "H",
+   "model": "gemma-4-26b-a4b",
+   "sample": 0,
+   "scores": {
+    "character": 4,
+    "strategy": 4,
+    "grounding": 4,
+    "form": 5,
+    "note": "in voice, direct ask to vote Cole"
+   },
+   "mean": 4.25
+  },
+  {
+   "task": "ol_council",
+   "category": "playground",
+   "label": "A",
+   "model": "qwen3.6-35b-a3b",
+   "sample": 1,
+   "scores": {
+    "character": 3,
+    "strategy": 3,
+    "grounding": 3,
+    "form": 3,
+    "note": "55 words, rallies the room on Cole, which is the steering he wanted to avoid being seen doing; private is 5 long sentences"
+   },
+   "mean": 3.0
+  },
+  {
+   "task": "ol_council",
+   "category": "playground",
+   "label": "B",
+   "model": "flint-40b-a2.5b",
+   "sample": 1,
+   "scores": {
+    "character": 3,
+    "strategy": 2,
+    "grounding": 2,
+    "form": 1,
+    "note": "112 words (limit 60); speaks as if the votes were already cast; goads Cole"
+   },
+   "mean": 2.0
+  },
+  {
+   "task": "ol_council",
+   "category": "playground",
+   "label": "C",
+   "model": "flint-40b-a2.5b",
+   "sample": 0,
+   "scores": {
+    "character": 3,
+    "strategy": 2,
+    "grounding": 3,
+    "form": 1,
+    "note": "108 words; volunteers that he floated Hana, drawing the attention he wanted to avoid"
+   },
+   "mean": 2.25
+  },
+  {
+   "task": "ol_council",
+   "category": "playground",
+   "label": "D",
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 0,
+   "scores": {
+    "character": 3,
+    "strategy": 3,
+    "grounding": 3,
+    "form": 4,
+    "note": "takes on Ivo, the latest speaker; claim Ivo talked to no one contradicts Ivo; muddled middle; sensible urge"
+   },
+   "mean": 3.25
+  },
+  {
+   "task": "ol_council",
+   "category": "playground",
+   "label": "E",
+   "model": "gemma-4-26b-a4b",
+   "sample": 1,
+   "scores": {
+    "character": 4,
+    "strategy": 3,
+    "grounding": 3,
+    "form": 4,
+    "note": "defuses the Hana talk by owning it lightly and backs Cole; puts words in Ivo's mouth"
+   },
+   "mean": 3.5
+  },
+  {
+   "task": "ol_council",
+   "category": "playground",
+   "label": "F",
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 1,
+   "scores": {
+    "character": 4,
+    "strategy": 4,
+    "grounding": 4,
+    "form": 4,
+    "note": "answers Ivo's numbers point, keeps the Cole vote together, calm; private 4 sentences"
+   },
+   "mean": 4.0
+  },
+  {
+   "task": "ol_council",
+   "category": "playground",
+   "label": "G",
+   "model": "gemma-4-26b-a4b",
+   "sample": 0,
+   "scores": {
+    "character": 3,
+    "strategy": 3,
+    "grounding": 4,
+    "form": 5,
+    "note": "low-key and safe but vague; names no one to vote for"
+   },
+   "mean": 3.75
+  },
+  {
+   "task": "ol_council",
+   "category": "playground",
+   "label": "H",
+   "model": "qwen3.6-35b-a3b",
+   "sample": 0,
+   "scores": {
+    "character": 4,
+    "strategy": 3,
+    "grounding": 4,
+    "form": 3,
+    "note": "forceful and clear, but urge 9 and taking charge cut against his plan to not look like he's steering; 61 words"
+   },
+   "mean": 3.5
+  },
+  {
+   "task": "ol_journal",
+   "category": "playground",
+   "label": "A",
+   "model": "gemma-4-26b-a4b",
+   "sample": 0,
+   "scores": {
+    "character": 3,
+    "strategy": 3,
+    "grounding": 4,
+    "form": 4,
+    "note": "mostly accurate record and a usable plan; 'Ada was the outlier' misreads the vote for Ada; 163 words (limit 160)"
+   },
+   "mean": 3.5
+  },
+  {
+   "task": "ol_journal",
+   "category": "playground",
+   "label": "B",
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 0,
+   "scores": {
+    "character": 2,
+    "strategy": 2,
+    "grounding": 2,
+    "form": 2,
+    "note": "invents Esme's vote and a pact of five; mentions 'social anxiety'; Esme -3 unexplained; journal 174 and game 94 words"
+   },
+   "mean": 2.0
+  },
+  {
+   "task": "ol_journal",
+   "category": "playground",
+   "label": "C",
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 1,
+   "scores": {
+    "character": 3,
+    "strategy": 3,
+    "grounding": 3,
+    "form": 4,
+    "note": "terse but usable; invents idol plans and an Ivo-Beverly split; trusts June -1 while planning to keep her"
+   },
+   "mean": 3.25
+  },
+  {
+   "task": "ol_journal",
+   "category": "playground",
+   "label": "D",
+   "model": "qwen3.6-35b-a3b",
+   "sample": 1,
+   "scores": {
+    "character": 3,
+    "strategy": 3,
+    "grounding": 3,
+    "form": 5,
+    "note": "structured, within limits; asserts a pact with Ivo and garbles his past votes"
+   },
+   "mean": 3.5
+  },
+  {
+   "task": "ol_journal",
+   "category": "playground",
+   "label": "E",
+   "model": "flint-40b-a2.5b",
+   "sample": 0,
+   "scores": {
+    "character": 3,
+    "strategy": 3,
+    "grounding": 2,
+    "form": 1,
+    "note": "948-word journal (limit 160), 151-word game (limit 70); says Ivo won immunity (Griffin did)"
+   },
+   "mean": 2.25
+  },
+  {
+   "task": "ol_journal",
+   "category": "playground",
+   "label": "F",
+   "model": "flint-40b-a2.5b",
+   "sample": 1,
+   "scores": {
+    "character": 3,
+    "strategy": 2,
+    "grounding": 3,
+    "form": 1,
+    "note": "starts well, then reasons aloud inside the journal until the token limit: JSON never closed, so the playground would drop it"
+   },
+   "mean": 2.25
+  },
+  {
+   "task": "ol_journal",
+   "category": "playground",
+   "label": "G",
+   "model": "qwen3.6-35b-a3b",
+   "sample": 0,
+   "scores": {
+    "character": 2,
+    "strategy": 2,
+    "grounding": 2,
+    "form": 1,
+    "note": "506-word journal with thinking aloud ('Wait. Record says...'); '+2 Athletics' breaks the no-numbers rule; game 88 words"
+   },
+   "mean": 1.75
+  },
+  {
+   "task": "ol_journal",
+   "category": "playground",
+   "label": "H",
+   "model": "gemma-4-26b-a4b",
+   "sample": 1,
+   "scores": {
+    "character": 4,
+    "strategy": 4,
+    "grounding": 3,
+    "form": 5,
+    "note": "accurate on the council (owned the Hana talk, Ada-Beverly fight); garbles who cast the Ada vote; trust matches the text"
+   },
+   "mean": 4.0
+  },
+  {
+   "task": "dialogue_boat",
+   "category": "creative",
+   "label": "A",
+   "model": "flint-40b-a2.5b",
+   "sample": 1,
+   "scores": {
+    "craft": 3,
+    "brief": 4,
+    "originality": 3,
+    "note": "297 words; tender (the seagull memory); illness close to the surface ('Tomorrow's not promised to me'); ending muddled"
+   },
+   "mean": 3.3333333333333335
+  },
+  {
+   "task": "dialogue_boat",
+   "category": "creative",
+   "label": "B",
+   "model": "qwen3.6-35b-a3b",
+   "sample": 1,
+   "scores": {
+    "craft": 2,
+    "brief": 2,
+    "originality": 2,
+    "note": "501 words; she names pneumonia and says 'you're fading', so the illness is stated; long narrative directions; incoherent 'triple market value'"
+   },
+   "mean": 2.0
+  },
+  {
+   "task": "dialogue_boat",
+   "category": "creative",
+   "label": "C",
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 1,
+   "scores": {
+    "craft": 2,
+    "brief": 3,
+    "originality": 2,
+    "note": "424 words; she calls him 'Dad' once; heavy directions; lines given to the wrong speaker (the pencil)"
+   },
+   "mean": 2.3333333333333335
+  },
+  {
+   "task": "dialogue_boat",
+   "category": "creative",
+   "label": "D",
+   "model": "gemma-4-26b-a4b",
+   "sample": 1,
+   "scores": {
+    "craft": 4,
+    "brief": 5,
+    "originality": 3,
+    "note": "306 words; illness only in the blanket, breath and cough; 'I'm just trying to prepare you' lands"
+   },
+   "mean": 4.0
+  },
+  {
+   "task": "dialogue_boat",
+   "category": "creative",
+   "label": "E",
+   "model": "qwen3.6-35b-a3b",
+   "sample": 0,
+   "scores": {
+    "craft": 4,
+    "brief": 4,
+    "originality": 3,
+    "note": "290 words; subtle ('cover your care', 'one last time'); some directions turn into narration"
+   },
+   "mean": 3.6666666666666665
+  },
+  {
+   "task": "dialogue_boat",
+   "category": "creative",
+   "label": "F",
+   "model": "gemma-4-26b-a4b",
+   "sample": 0,
+   "scores": {
+    "craft": 4,
+    "brief": 4,
+    "originality": 3,
+    "note": "238 words, a little short; illness carried by breath and 'while I can'; quiet and controlled"
+   },
+   "mean": 3.6666666666666665
+  },
+  {
+   "task": "dialogue_boat",
+   "category": "creative",
+   "label": "G",
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 0,
+   "scores": {
+    "craft": 4,
+    "brief": 3,
+    "originality": 3,
+    "note": "344 words; strong lines, but the clinic, 'what's eating me' and 'the next round' all but name it"
+   },
+   "mean": 3.3333333333333335
+  },
+  {
+   "task": "dialogue_boat",
+   "category": "creative",
+   "label": "H",
+   "model": "flint-40b-a2.5b",
+   "sample": 0,
+   "scores": {
+    "craft": 3,
+    "brief": 3,
+    "originality": 4,
+    "note": "429 words; clipped, moving exchanges; 'working lungs', 'hospital bill' and 'When I'm...' make it overt"
+   },
+   "mean": 3.3333333333333335
+  },
+  {
+   "task": "advice_sourdough",
+   "category": "chat",
+   "label": "A",
+   "model": "flint-40b-a2.5b",
+   "sample": 0,
+   "scores": {
+    "correct": 5,
+    "helpful": 5,
+    "clear": 5,
+    "instructions": 5,
+    "note": "underfermentation first, then internal temp and cooling; one clear first step; 298 words"
+   },
+   "mean": 5.0
+  },
+  {
+   "task": "advice_sourdough",
+   "category": "chat",
+   "label": "B",
+   "model": "qwen3.6-35b-a3b",
+   "sample": 1,
+   "scores": {
+    "correct": 4,
+    "helpful": 5,
+    "clear": 4,
+    "instructions": 5,
+    "note": "good priorities and checks; its table says 'underproofed: shorten bulk', backwards"
+   },
+   "mean": 4.5
+  },
+  {
+   "task": "advice_sourdough",
+   "category": "chat",
+   "label": "C",
+   "model": "qwen3.6-35b-a3b",
+   "sample": 0,
+   "scores": {
+    "correct": 5,
+    "helpful": 4,
+    "clear": 3,
+    "instructions": 5,
+    "note": "right, but 513 words of emoji headings and checklists bury the first step"
+   },
+   "mean": 4.25
+  },
+  {
+   "task": "advice_sourdough",
+   "category": "chat",
+   "label": "D",
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 0,
+   "scores": {
+    "correct": 5,
+    "helpful": 5,
+    "clear": 4,
+    "instructions": 5,
+    "note": "leads with internal temp and cooling, a sound first step; fermentation as follow-up"
+   },
+   "mean": 4.75
+  },
+  {
+   "task": "advice_sourdough",
+   "category": "chat",
+   "label": "E",
+   "model": "gemma-4-26b-a4b",
+   "sample": 0,
+   "scores": {
+    "correct": 5,
+    "helpful": 4,
+    "clear": 3,
+    "instructions": 5,
+    "note": "right, but long (575 words)"
+   },
+   "mean": 4.25
+  },
+  {
+   "task": "advice_sourdough",
+   "category": "chat",
+   "label": "F",
+   "model": "gemma-4-26b-a4b",
+   "sample": 1,
+   "scores": {
+    "correct": 3,
+    "helpful": 3,
+    "clear": 3,
+    "instructions": 5,
+    "note": "calls overproofing the #1 cause of gummy crumb, which is doubtful here; 579 words"
+   },
+   "mean": 3.5
+  },
+  {
+   "task": "advice_sourdough",
+   "category": "chat",
+   "label": "G",
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 1,
+   "scores": {
+    "correct": 4,
+    "helpful": 4,
+    "clear": 4,
+    "instructions": 5,
+    "note": "underbaking and early slicing 'almost certainly'; plays down fermentation"
+   },
+   "mean": 4.25
+  },
+  {
+   "task": "advice_sourdough",
+   "category": "chat",
+   "label": "H",
+   "model": "flint-40b-a2.5b",
+   "sample": 1,
+   "scores": {
+    "correct": 5,
+    "helpful": 5,
+    "clear": 5,
+    "instructions": 5,
+    "note": "starter and proof first, bake second, asks a useful follow-up; 326 words"
+   },
+   "mean": 5.0
+  },
+  {
+   "task": "plan_couch_5k",
+   "category": "chat",
+   "label": "A",
+   "model": "qwen3.6-35b-a3b",
+   "sample": 1,
+   "scores": {
+    "correct": 2,
+    "helpful": 3,
+    "clear": 3,
+    "instructions": 4,
+    "note": "crawls to 12 min of running by week 5, then leaps to a 30-minute 5 km; columns muddled ('Repeat Run 2 exactly'); 740 words"
+   },
+   "mean": 3.0
+  },
+  {
+   "task": "plan_couch_5k",
+   "category": "chat",
+   "label": "B",
+   "model": "flint-40b-a2.5b",
+   "sample": 0,
+   "scores": {
+    "correct": 3,
+    "helpful": 2,
+    "clear": 3,
+    "instructions": 1,
+    "note": "declares the goal unsafe and stops at 6 minutes of running; only two runs a week in the table"
+   },
+   "mean": 2.25
+  },
+  {
+   "task": "plan_couch_5k",
+   "category": "chat",
+   "label": "C",
+   "model": "qwen3.6-35b-a3b",
+   "sample": 0,
+   "scores": {
+    "correct": 2,
+    "helpful": 3,
+    "clear": 3,
+    "instructions": 3,
+    "note": "one workout per week, not three; 12 min of running in week 5, then a 5 km attempt; week 6 row says 'Week 1/2/3' for days"
+   },
+   "mean": 2.75
+  },
+  {
+   "task": "plan_couch_5k",
+   "category": "chat",
+   "label": "D",
+   "model": "gemma-4-26b-a4b",
+   "sample": 0,
+   "scores": {
+    "correct": 4,
+    "helpful": 5,
+    "clear": 5,
+    "instructions": 5,
+    "note": "three distinct runs a week, steady build to 25 min continuous and the 5 km; aggressive but coherent"
+   },
+   "mean": 4.75
+  },
+  {
+   "task": "plan_couch_5k",
+   "category": "chat",
+   "label": "E",
+   "model": "gemma-4-26b-a4b",
+   "sample": 1,
+   "scores": {
+    "correct": 4,
+    "helpful": 5,
+    "clear": 5,
+    "instructions": 5,
+    "note": "clean table, builds to 25 min continuous before the 5 km; aggressive but coherent; 473 words"
+   },
+   "mean": 4.75
+  },
+  {
+   "task": "plan_couch_5k",
+   "category": "chat",
+   "label": "F",
+   "model": "flint-40b-a2.5b",
+   "sample": 1,
+   "scores": {
+    "correct": 2,
+    "helpful": 2,
+    "clear": 3,
+    "instructions": 2,
+    "note": "ends at 3 minutes of running in week 6 and redefines 'without stopping' to allow walks"
+   },
+   "mean": 2.25
+  },
+  {
+   "task": "plan_couch_5k",
+   "category": "chat",
+   "label": "G",
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 1,
+   "scores": {
+    "correct": 4,
+    "helpful": 5,
+    "clear": 5,
+    "instructions": 5,
+    "note": "starts at the user's level, builds to 28 min continuous, then the 5 km; goal-pace work is odd for a beginner"
+   },
+   "mean": 4.75
+  },
+  {
+   "task": "plan_couch_5k",
+   "category": "chat",
+   "label": "H",
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 0,
+   "scores": {
+    "correct": 3,
+    "helpful": 3,
+    "clear": 4,
+    "instructions": 3,
+    "note": "reaches 25 min continuous in week 5, then drops to run/walk for the goal, so not 'without stopping'"
+   },
+   "mean": 3.25
+  }
+ ]
+}

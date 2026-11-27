@@ -41,7 +41,7 @@ script.
 | `qwen3.6-35b-a3b` | Qwen3.6 35B-A3B, unsloth UD-Q4_K_M | 20.6 GiB | 465 tok/s reading, 23.7 tok/s writing (llama-bench); through the server 22.7 tok/s, or 17 tok/s each with two requests at once; 12.8 s for a cold request from the page cache; ~23 GB of iGPU memory loaded (2026-11-21) |
 | `gemma-4-26b-a4b` | Gemma 4 26B-A4B-it, Google's QAT Q4_0 | 13.4 GiB | 574 tok/s reading, 28.2 tok/s writing (llama-bench); through the server 27.1 tok/s, or 20.3 tok/s each with two requests at once; 10.2 s for a cold request; ~17 GB of iGPU memory loaded (2026-11-26, [details](#gemma-and-qwen-q5-benchmark-2026-11-26)) |
 | `flint-40b-a2.5b` | Recursive Flint 40B-A2.5B, ggml-org Q4_K_M | 21.8 GiB | 466 tok/s reading, 28.3 tok/s writing (llama-bench); through the server 28.0 tok/s, or 22.8 tok/s each with two requests at once; 16.8 s for a cold request; ~24.5 GB of iGPU memory loaded (2026-11-26, [details](#flint-benchmark-2026-11-26)) |
-| `qwen3.6-35b-a3b-q5` (on trial) | Qwen3.6 35B-A3B, unsloth UD-Q5_K_M | 24.6 GiB | 441 tok/s reading, 21.8 tok/s writing (llama-bench); through the server 21.0 tok/s, or 15.0 tok/s each with two requests at once; 25.7 s for a cold request; ~28 GB of iGPU memory loaded (2026-11-26, [details](#gemma-and-qwen-q5-benchmark-2026-11-26)). Quality eval in progress |
+| `qwen3.6-35b-a3b-q5` (on trial) | Qwen3.6 35B-A3B, unsloth UD-Q5_K_M | 24.6 GiB | 441 tok/s reading, 21.8 tok/s writing (llama-bench); through the server 21.0 tok/s, or 15.0 tok/s each with two requests at once; 25.7 s for a cold request; ~28 GB of iGPU memory loaded (2026-11-26, [details](#gemma-and-qwen-q5-benchmark-2026-11-26)). No better than Q4 in the [quality eval](#answer-quality-2026-11-26); recommended for removal |
 
 All of them are mixture-of-experts models: large in total, but only 2.5–4B parameters work on
 each token, which is what makes them quick on this machine. Memory speed (dual-channel DDR5,
@@ -120,15 +120,18 @@ Q4 at writing and 5% slower at reading short prompts, the same at 16k, and needs
 memory: about 28 GB of the roughly 33 GB the iGPU can address, which leaves little for the
 game servers. Answer quality: see the next section.
 
-### Answer quality (2026-11-26, in progress)
+### Answer quality (2026-11-26)
 
 The eval suite in `evals/` (see `evals/README.md`) runs 36 tasks: 12 coding (4 easy,
 4 medium, 4 hard, scored by hidden unit tests), 6 creative, 6 real agent-playground prompts
 and 12 chat. Each task is run twice per model, with the settings used in practice: thinking
 on, except the playground tasks, which are sent exactly as the playground sends them.
-Creative, playground and chat answers will be judged blind against `evals/rubric.md`
-once all four models have run. Raw answers: `evals/results/2026-11-26/<model>.jsonl`;
-automatic scores: `auto.json` there. Recorded model by model as each finishes.
+Creative, playground and chat answers were judged blind by Claude against
+`evals/rubric.md`: each task's 8 answers under shuffled labels, without model names or
+thinking. Raw answers: `evals/results/2026-11-26/<model>.jsonl`; automatic scores
+`auto.json`, judgments `judgments.json` (with a note per answer) and means `summary.json`
+there. Report page with side-by-side answers: https://claude.ai/artifact/WNMCuCgPcJVqE3suUK3wrL
+(private to the owner).
 
 | | Gemma | Flint | Qwen3.6 Q4 | Qwen3.6 Q5 |
 | --- | --- | --- | --- | --- |
@@ -136,6 +139,27 @@ automatic scores: `auto.json` there. Recorded model by model as each finishes.
 | Playground replies, valid JSON | 12 of 12 | 11 of 12 | 12 of 12 | 12 of 12 |
 | Answers cut off by `max_tokens` (16384; 2048 in the playground) | 1 of 72 | 2 of 72 | 2 of 72 | 1 of 72 |
 | Time for the 72 tasks, two at a time | 2 h 06 min | 1 h 27 min | 2 h 39 min | 2 h 40 min |
+| **Judged, all (1–5)** | **4.14** | 3.57 | 3.84 | 3.82 |
+| Chat (12 tasks) | **4.57** | 4.31 | 4.25 | 4.36 |
+| Creative (6 tasks) | **3.61** | 3.22 | 3.53 | 3.36 |
+| Playground (6 tasks) | **3.79** | 2.42 | 3.33 | 3.21 |
+
+**Recommendations** (each needs the user's OK before anything changes):
+- **Gemma: keep, and lead with it** on the chat page and in playground seats. It passed every
+  coding test, has the top judged score in all three categories, reads fastest and uses the
+  least memory. Its one weakness: word-count constraints can send its thinking into a loop.
+- **Flint: keep for chat and quick coding, not the playground.** It is the fastest writer
+  and good at chat (4.31) and code (22 of 24), but the worst playground player by a wide
+  margin: 5 of 12 replies broke the length limits, one leaked its reasoning into the reply
+  until the JSON broke, and it mixed up earlier games with the current one.
+- **Qwen3.6 Q4: optional.** Middle of the field on judged tasks, weakest but one on code,
+  and it thinks longest. Nothing here needs it once Gemma leads.
+- **Qwen3.6 Q5: drop.** No better than Q4 on any measure, 9% slower and 28 GB loaded.
+
+Limits: one judge and two samples per task, so category differences under about 0.3 are a
+tie. The blinding was imperfect: a few answers (Gemma's blurbs, the fact answers, Flint's
+broken journal) had been seen with model names while checking the run. The user's blind
+spot check on the report page is the check on the judge.
 
 **Gemma** (16:01–18:07):
 - **Coding.** It passed every test, including the hard tasks: a TTL cache, an expression

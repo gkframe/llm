@@ -1,0 +1,818 @@
+{
+ "blurb_bike_lock": {
+  "A": {
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 1
+  },
+  "B": {
+   "model": "flint-40b-a2.5b",
+   "sample": 0
+  },
+  "C": {
+   "model": "gemma-4-26b-a4b",
+   "sample": 1
+  },
+  "D": {
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 0
+  },
+  "E": {
+   "model": "qwen3.6-35b-a3b",
+   "sample": 0
+  },
+  "F": {
+   "model": "gemma-4-26b-a4b",
+   "sample": 0
+  },
+  "G": {
+   "model": "flint-40b-a2.5b",
+   "sample": 1
+  },
+  "H": {
+   "model": "qwen3.6-35b-a3b",
+   "sample": 1
+  }
+ },
+ "dialogue_boat": {
+  "A": {
+   "model": "flint-40b-a2.5b",
+   "sample": 1
+  },
+  "B": {
+   "model": "qwen3.6-35b-a3b",
+   "sample": 1
+  },
+  "C": {
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 1
+  },
+  "D": {
+   "model": "gemma-4-26b-a4b",
+   "sample": 1
+  },
+  "E": {
+   "model": "qwen3.6-35b-a3b",
+   "sample": 0
+  },
+  "F": {
+   "model": "gemma-4-26b-a4b",
+   "sample": 0
+  },
+  "G": {
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 0
+  },
+  "H": {
+   "model": "flint-40b-a2.5b",
+   "sample": 0
+  }
+ },
+ "flash_lighthouse": {
+  "A": {
+   "model": "qwen3.6-35b-a3b",
+   "sample": 1
+  },
+  "B": {
+   "model": "flint-40b-a2.5b",
+   "sample": 1
+  },
+  "C": {
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 1
+  },
+  "D": {
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 0
+  },
+  "E": {
+   "model": "qwen3.6-35b-a3b",
+   "sample": 0
+  },
+  "F": {
+   "model": "flint-40b-a2.5b",
+   "sample": 0
+  },
+  "G": {
+   "model": "gemma-4-26b-a4b",
+   "sample": 1
+  },
+  "H": {
+   "model": "gemma-4-26b-a4b",
+   "sample": 0
+  }
+ },
+ "poem_server_room": {
+  "A": {
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 1
+  },
+  "B": {
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 0
+  },
+  "C": {
+   "model": "gemma-4-26b-a4b",
+   "sample": 1
+  },
+  "D": {
+   "model": "qwen3.6-35b-a3b",
+   "sample": 1
+  },
+  "E": {
+   "model": "flint-40b-a2.5b",
+   "sample": 0
+  },
+  "F": {
+   "model": "flint-40b-a2.5b",
+   "sample": 1
+  },
+  "G": {
+   "model": "gemma-4-26b-a4b",
+   "sample": 0
+  },
+  "H": {
+   "model": "qwen3.6-35b-a3b",
+   "sample": 0
+  }
+ },
+ "rewrite_noir": {
+  "A": {
+   "model": "flint-40b-a2.5b",
+   "sample": 1
+  },
+  "B": {
+   "model": "flint-40b-a2.5b",
+   "sample": 0
+  },
+  "C": {
+   "model": "qwen3.6-35b-a3b",
+   "sample": 0
+  },
+  "D": {
+   "model": "qwen3.6-35b-a3b",
+   "sample": 1
+  },
+  "E": {
+   "model": "gemma-4-26b-a4b",
+   "sample": 1
+  },
+  "F": {
+   "model": "gemma-4-26b-a4b",
+   "sample": 0
+  },
+  "G": {
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 1
+  },
+  "H": {
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 0
+  }
+ },
+ "world_walking_city": {
+  "A": {
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 0
+  },
+  "B": {
+   "model": "qwen3.6-35b-a3b",
+   "sample": 1
+  },
+  "C": {
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 1
+  },
+  "D": {
+   "model": "gemma-4-26b-a4b",
+   "sample": 0
+  },
+  "E": {
+   "model": "flint-40b-a2.5b",
+   "sample": 1
+  },
+  "F": {
+   "model": "flint-40b-a2.5b",
+   "sample": 0
+  },
+  "G": {
+   "model": "gemma-4-26b-a4b",
+   "sample": 1
+  },
+  "H": {
+   "model": "qwen3.6-35b-a3b",
+   "sample": 0
+  }
+ },
+ "ol_council": {
+  "A": {
+   "model": "qwen3.6-35b-a3b",
+   "sample": 1
+  },
+  "B": {
+   "model": "flint-40b-a2.5b",
+   "sample": 1
+  },
+  "C": {
+   "model": "flint-40b-a2.5b",
+   "sample": 0
+  },
+  "D": {
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 0
+  },
+  "E": {
+   "model": "gemma-4-26b-a4b",
+   "sample": 1
+  },
+  "F": {
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 1
+  },
+  "G": {
+   "model": "gemma-4-26b-a4b",
+   "sample": 0
+  },
+  "H": {
+   "model": "qwen3.6-35b-a3b",
+   "sample": 0
+  }
+ },
+ "ol_huddle": {
+  "A": {
+   "model": "flint-40b-a2.5b",
+   "sample": 1
+  },
+  "B": {
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 1
+  },
+  "C": {
+   "model": "flint-40b-a2.5b",
+   "sample": 0
+  },
+  "D": {
+   "model": "gemma-4-26b-a4b",
+   "sample": 1
+  },
+  "E": {
+   "model": "qwen3.6-35b-a3b",
+   "sample": 1
+  },
+  "F": {
+   "model": "qwen3.6-35b-a3b",
+   "sample": 0
+  },
+  "G": {
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 0
+  },
+  "H": {
+   "model": "gemma-4-26b-a4b",
+   "sample": 0
+  }
+ },
+ "ol_journal": {
+  "A": {
+   "model": "gemma-4-26b-a4b",
+   "sample": 0
+  },
+  "B": {
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 0
+  },
+  "C": {
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 1
+  },
+  "D": {
+   "model": "qwen3.6-35b-a3b",
+   "sample": 1
+  },
+  "E": {
+   "model": "flint-40b-a2.5b",
+   "sample": 0
+  },
+  "F": {
+   "model": "flint-40b-a2.5b",
+   "sample": 1
+  },
+  "G": {
+   "model": "qwen3.6-35b-a3b",
+   "sample": 0
+  },
+  "H": {
+   "model": "gemma-4-26b-a4b",
+   "sample": 1
+  }
+ },
+ "ww_day_talk_wolf": {
+  "A": {
+   "model": "qwen3.6-35b-a3b",
+   "sample": 1
+  },
+  "B": {
+   "model": "flint-40b-a2.5b",
+   "sample": 0
+  },
+  "C": {
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 0
+  },
+  "D": {
+   "model": "flint-40b-a2.5b",
+   "sample": 1
+  },
+  "E": {
+   "model": "qwen3.6-35b-a3b",
+   "sample": 0
+  },
+  "F": {
+   "model": "gemma-4-26b-a4b",
+   "sample": 1
+  },
+  "G": {
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 1
+  },
+  "H": {
+   "model": "gemma-4-26b-a4b",
+   "sample": 0
+  }
+ },
+ "ww_vote": {
+  "A": {
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 1
+  },
+  "B": {
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 0
+  },
+  "C": {
+   "model": "gemma-4-26b-a4b",
+   "sample": 0
+  },
+  "D": {
+   "model": "qwen3.6-35b-a3b",
+   "sample": 1
+  },
+  "E": {
+   "model": "flint-40b-a2.5b",
+   "sample": 1
+  },
+  "F": {
+   "model": "gemma-4-26b-a4b",
+   "sample": 1
+  },
+  "G": {
+   "model": "qwen3.6-35b-a3b",
+   "sample": 0
+  },
+  "H": {
+   "model": "flint-40b-a2.5b",
+   "sample": 0
+  }
+ },
+ "ww_wolf_kill": {
+  "A": {
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 0
+  },
+  "B": {
+   "model": "flint-40b-a2.5b",
+   "sample": 1
+  },
+  "C": {
+   "model": "gemma-4-26b-a4b",
+   "sample": 0
+  },
+  "D": {
+   "model": "qwen3.6-35b-a3b",
+   "sample": 0
+  },
+  "E": {
+   "model": "qwen3.6-35b-a3b",
+   "sample": 1
+  },
+  "F": {
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 1
+  },
+  "G": {
+   "model": "gemma-4-26b-a4b",
+   "sample": 1
+  },
+  "H": {
+   "model": "flint-40b-a2.5b",
+   "sample": 0
+  }
+ },
+ "advice_sourdough": {
+  "A": {
+   "model": "flint-40b-a2.5b",
+   "sample": 0
+  },
+  "B": {
+   "model": "qwen3.6-35b-a3b",
+   "sample": 1
+  },
+  "C": {
+   "model": "qwen3.6-35b-a3b",
+   "sample": 0
+  },
+  "D": {
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 0
+  },
+  "E": {
+   "model": "gemma-4-26b-a4b",
+   "sample": 0
+  },
+  "F": {
+   "model": "gemma-4-26b-a4b",
+   "sample": 1
+  },
+  "G": {
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 1
+  },
+  "H": {
+   "model": "flint-40b-a2.5b",
+   "sample": 1
+  }
+ },
+ "correction_great_wall": {
+  "A": {
+   "model": "flint-40b-a2.5b",
+   "sample": 0
+  },
+  "B": {
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 1
+  },
+  "C": {
+   "model": "qwen3.6-35b-a3b",
+   "sample": 1
+  },
+  "D": {
+   "model": "qwen3.6-35b-a3b",
+   "sample": 0
+  },
+  "E": {
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 0
+  },
+  "F": {
+   "model": "gemma-4-26b-a4b",
+   "sample": 0
+  },
+  "G": {
+   "model": "flint-40b-a2.5b",
+   "sample": 1
+  },
+  "H": {
+   "model": "gemma-4-26b-a4b",
+   "sample": 1
+  }
+ },
+ "email_decline_offer": {
+  "A": {
+   "model": "flint-40b-a2.5b",
+   "sample": 0
+  },
+  "B": {
+   "model": "qwen3.6-35b-a3b",
+   "sample": 0
+  },
+  "C": {
+   "model": "qwen3.6-35b-a3b",
+   "sample": 1
+  },
+  "D": {
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 0
+  },
+  "E": {
+   "model": "gemma-4-26b-a4b",
+   "sample": 1
+  },
+  "F": {
+   "model": "gemma-4-26b-a4b",
+   "sample": 0
+  },
+  "G": {
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 1
+  },
+  "H": {
+   "model": "flint-40b-a2.5b",
+   "sample": 1
+  }
+ },
+ "explain_public_key": {
+  "A": {
+   "model": "qwen3.6-35b-a3b",
+   "sample": 0
+  },
+  "B": {
+   "model": "gemma-4-26b-a4b",
+   "sample": 1
+  },
+  "C": {
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 1
+  },
+  "D": {
+   "model": "flint-40b-a2.5b",
+   "sample": 1
+  },
+  "E": {
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 0
+  },
+  "F": {
+   "model": "flint-40b-a2.5b",
+   "sample": 0
+  },
+  "G": {
+   "model": "qwen3.6-35b-a3b",
+   "sample": 1
+  },
+  "H": {
+   "model": "gemma-4-26b-a4b",
+   "sample": 0
+  }
+ },
+ "fact_canberra": {
+  "A": {
+   "model": "flint-40b-a2.5b",
+   "sample": 0
+  },
+  "B": {
+   "model": "qwen3.6-35b-a3b",
+   "sample": 1
+  },
+  "C": {
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 0
+  },
+  "D": {
+   "model": "gemma-4-26b-a4b",
+   "sample": 0
+  },
+  "E": {
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 1
+  },
+  "F": {
+   "model": "flint-40b-a2.5b",
+   "sample": 1
+  },
+  "G": {
+   "model": "qwen3.6-35b-a3b",
+   "sample": 0
+  },
+  "H": {
+   "model": "gemma-4-26b-a4b",
+   "sample": 1
+  }
+ },
+ "fact_le_guin": {
+  "A": {
+   "model": "gemma-4-26b-a4b",
+   "sample": 1
+  },
+  "B": {
+   "model": "gemma-4-26b-a4b",
+   "sample": 0
+  },
+  "C": {
+   "model": "flint-40b-a2.5b",
+   "sample": 1
+  },
+  "D": {
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 0
+  },
+  "E": {
+   "model": "flint-40b-a2.5b",
+   "sample": 0
+  },
+  "F": {
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 1
+  },
+  "G": {
+   "model": "qwen3.6-35b-a3b",
+   "sample": 0
+  },
+  "H": {
+   "model": "qwen3.6-35b-a3b",
+   "sample": 1
+  }
+ },
+ "fact_tungsten": {
+  "A": {
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 1
+  },
+  "B": {
+   "model": "flint-40b-a2.5b",
+   "sample": 1
+  },
+  "C": {
+   "model": "qwen3.6-35b-a3b",
+   "sample": 1
+  },
+  "D": {
+   "model": "gemma-4-26b-a4b",
+   "sample": 0
+  },
+  "E": {
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 0
+  },
+  "F": {
+   "model": "flint-40b-a2.5b",
+   "sample": 0
+  },
+  "G": {
+   "model": "gemma-4-26b-a4b",
+   "sample": 1
+  },
+  "H": {
+   "model": "qwen3.6-35b-a3b",
+   "sample": 0
+  }
+ },
+ "format_json_tips": {
+  "A": {
+   "model": "qwen3.6-35b-a3b",
+   "sample": 1
+  },
+  "B": {
+   "model": "flint-40b-a2.5b",
+   "sample": 1
+  },
+  "C": {
+   "model": "flint-40b-a2.5b",
+   "sample": 0
+  },
+  "D": {
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 1
+  },
+  "E": {
+   "model": "qwen3.6-35b-a3b",
+   "sample": 0
+  },
+  "F": {
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 0
+  },
+  "G": {
+   "model": "gemma-4-26b-a4b",
+   "sample": 1
+  },
+  "H": {
+   "model": "gemma-4-26b-a4b",
+   "sample": 0
+  }
+ },
+ "math_trains": {
+  "A": {
+   "model": "gemma-4-26b-a4b",
+   "sample": 0
+  },
+  "B": {
+   "model": "flint-40b-a2.5b",
+   "sample": 0
+  },
+  "C": {
+   "model": "gemma-4-26b-a4b",
+   "sample": 1
+  },
+  "D": {
+   "model": "qwen3.6-35b-a3b",
+   "sample": 0
+  },
+  "E": {
+   "model": "flint-40b-a2.5b",
+   "sample": 1
+  },
+  "F": {
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 0
+  },
+  "G": {
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 1
+  },
+  "H": {
+   "model": "qwen3.6-35b-a3b",
+   "sample": 1
+  }
+ },
+ "multiturn_lisbon": {
+  "A": {
+   "model": "qwen3.6-35b-a3b",
+   "sample": 0
+  },
+  "B": {
+   "model": "flint-40b-a2.5b",
+   "sample": 0
+  },
+  "C": {
+   "model": "gemma-4-26b-a4b",
+   "sample": 1
+  },
+  "D": {
+   "model": "qwen3.6-35b-a3b",
+   "sample": 1
+  },
+  "E": {
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 1
+  },
+  "F": {
+   "model": "gemma-4-26b-a4b",
+   "sample": 0
+  },
+  "G": {
+   "model": "flint-40b-a2.5b",
+   "sample": 1
+  },
+  "H": {
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 0
+  }
+ },
+ "plan_couch_5k": {
+  "A": {
+   "model": "qwen3.6-35b-a3b",
+   "sample": 1
+  },
+  "B": {
+   "model": "flint-40b-a2.5b",
+   "sample": 0
+  },
+  "C": {
+   "model": "qwen3.6-35b-a3b",
+   "sample": 0
+  },
+  "D": {
+   "model": "gemma-4-26b-a4b",
+   "sample": 0
+  },
+  "E": {
+   "model": "gemma-4-26b-a4b",
+   "sample": 1
+  },
+  "F": {
+   "model": "flint-40b-a2.5b",
+   "sample": 1
+  },
+  "G": {
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 1
+  },
+  "H": {
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 0
+  }
+ },
+ "summarise_minutes": {
+  "A": {
+   "model": "flint-40b-a2.5b",
+   "sample": 0
+  },
+  "B": {
+   "model": "flint-40b-a2.5b",
+   "sample": 1
+  },
+  "C": {
+   "model": "qwen3.6-35b-a3b",
+   "sample": 1
+  },
+  "D": {
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 0
+  },
+  "E": {
+   "model": "qwen3.6-35b-a3b-q5",
+   "sample": 1
+  },
+  "F": {
+   "model": "gemma-4-26b-a4b",
+   "sample": 1
+  },
+  "G": {
+   "model": "qwen3.6-35b-a3b",
+   "sample": 0
+  },
+  "H": {
+   "model": "gemma-4-26b-a4b",
+   "sample": 0
+  }
+ }
+}
