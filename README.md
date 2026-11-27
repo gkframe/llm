@@ -132,10 +132,10 @@ automatic scores: `auto.json` there. Recorded model by model as each finishes.
 
 | | Gemma | Flint | Qwen3.6 Q4 | Qwen3.6 Q5 |
 | --- | --- | --- | --- | --- |
-| Coding, unit tests passed (easy / medium / hard, of 8 each) | 8 / 8 / 8 | 8 / 8 / 6 | 8 / 5 / 5 | running |
-| Playground replies, valid JSON | 12 of 12 | 11 of 12 | 12 of 12 | |
-| Answers cut off by `max_tokens` (16384; 2048 in the playground) | 1 of 72 | 2 of 72 | 2 of 72 | |
-| Time for the 72 tasks, two at a time | 2 h 06 min | 1 h 27 min | 2 h 39 min | |
+| Coding, unit tests passed (easy / medium / hard, of 8 each) | 8 / 8 / 8 | 8 / 8 / 6 | 8 / 5 / 5 | 8 / 6 / 2 |
+| Playground replies, valid JSON | 12 of 12 | 11 of 12 | 12 of 12 | 12 of 12 |
+| Answers cut off by `max_tokens` (16384; 2048 in the playground) | 1 of 72 | 2 of 72 | 2 of 72 | 1 of 72 |
+| Time for the 72 tasks, two at a time | 2 h 06 min | 1 h 27 min | 2 h 39 min | 2 h 40 min |
 
 **Gemma** (16:01–18:07):
 - **Coding.** It passed every test, including the hard tasks: a TTL cache, an expression
@@ -169,6 +169,19 @@ automatic scores: `auto.json` there. Recorded model by model as each finishes.
   that returned a 700 route over the 600 one, and a cache that compared a list with a float.
   It also thinks the longest: a median of 4.5 minutes per easy task (Flint: 1), 9 per medium,
   10 per hard.
+- **Facts and reasoning.** The fact questions and the two-trains problem were right in both
+  samples, and every formatting check and all 12 playground replies passed.
+
+**Qwen3.6 Q5** (23:43–02:23):
+- **Coding.** It passed every easy test, 6 of 8 medium and only 2 of 8 hard, so no better
+  than Q4 and worse on the hard tasks. That's within the noise of two samples per task, but
+  there's no sign that Q5's extra precision helps with code. The failures are wrong answers,
+  not cut-offs (only one hit the limit): an evaluator that rejects `--1`, a route search
+  that picked the 700 route over the 600 one (the same mistake Q4 made), a refactor that
+  dropped the BULK10 discount, caches that expire entries at the wrong moment, a CSV parser
+  that rejects a valid quoted field, and a parse-duration fix that rejects valid input.
+  Its thinking times match Q4's: a median of 5 minutes per easy task, 8 per medium, 11 per
+  hard.
 - **Facts and reasoning.** The fact questions and the two-trains problem were right in both
   samples, and every formatting check and all 12 playground replies passed.
 

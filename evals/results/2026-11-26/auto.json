@@ -53,7 +53,7 @@
    "passed": false,
    "ran": 0,
    "failed": 0,
-   "note": "ImportError: cannot import name 'cheapest_route' from 'solution' (/tmp/eval-code-1273iwgr/solution.py)"
+   "note": "ImportError: cannot import name 'cheapest_route' from 'solution' (/tmp/eval-code-fg69gflh/solution.py)"
   },
   {
    "task": "h_evaluate",
@@ -1287,6 +1287,650 @@
    "three_bullets": true
   }
  ],
+ "qwen3.6-35b-a3b-q5": [
+  {
+   "task": "e_merge_intervals",
+   "sample": 0,
+   "category": "coding",
+   "level": "easy",
+   "finish_reason": "stop",
+   "passed": true,
+   "ran": 3,
+   "failed": 0,
+   "note": ""
+  },
+  {
+   "task": "e_isbn10",
+   "sample": 0,
+   "category": "coding",
+   "level": "easy",
+   "finish_reason": "stop",
+   "passed": true,
+   "ran": 2,
+   "failed": 0,
+   "note": ""
+  },
+  {
+   "task": "e_roman",
+   "sample": 0,
+   "category": "coding",
+   "level": "easy",
+   "finish_reason": "stop",
+   "passed": true,
+   "ran": 3,
+   "failed": 0,
+   "note": ""
+  },
+  {
+   "task": "e_top_words",
+   "sample": 0,
+   "category": "coding",
+   "level": "easy",
+   "finish_reason": "stop",
+   "passed": true,
+   "ran": 5,
+   "failed": 0,
+   "note": ""
+  },
+  {
+   "task": "h_cheapest_route",
+   "sample": 0,
+   "category": "coding",
+   "level": "hard",
+   "finish_reason": "stop",
+   "passed": false,
+   "ran": 5,
+   "failed": 1,
+   "note": "FAILED (failures=1)"
+  },
+  {
+   "task": "h_invoice_refactor",
+   "sample": 0,
+   "category": "coding",
+   "level": "hard",
+   "finish_reason": "stop",
+   "passed": true,
+   "ran": 4,
+   "failed": 0,
+   "note": ""
+  },
+  {
+   "task": "h_evaluate",
+   "sample": 0,
+   "category": "coding",
+   "level": "hard",
+   "finish_reason": "stop",
+   "passed": false,
+   "ran": 5,
+   "failed": 2,
+   "note": "FAILED (errors=2)"
+  },
+  {
+   "task": "m_build_order",
+   "sample": 0,
+   "category": "coding",
+   "level": "medium",
+   "finish_reason": "stop",
+   "passed": true,
+   "ran": 4,
+   "failed": 0,
+   "note": ""
+  },
+  {
+   "task": "h_ttl_cache",
+   "sample": 0,
+   "category": "coding",
+   "level": "hard",
+   "finish_reason": "stop",
+   "passed": false,
+   "ran": 11,
+   "failed": 3,
+   "note": "FAILED (failures=3)"
+  },
+  {
+   "task": "m_csv_line",
+   "sample": 0,
+   "category": "coding",
+   "level": "medium",
+   "finish_reason": "stop",
+   "passed": true,
+   "ran": 4,
+   "failed": 0,
+   "note": ""
+  },
+  {
+   "task": "m_parse_duration_fix",
+   "sample": 0,
+   "category": "coding",
+   "level": "medium",
+   "finish_reason": "stop",
+   "passed": true,
+   "ran": 2,
+   "failed": 0,
+   "note": ""
+  },
+  {
+   "task": "blurb_bike_lock",
+   "sample": 0,
+   "category": "creative",
+   "level": null,
+   "finish_reason": "stop",
+   "words": 70,
+   "length_ok": true,
+   "no_exclamation": true
+  },
+  {
+   "task": "m_ranges",
+   "sample": 0,
+   "category": "coding",
+   "level": "medium",
+   "finish_reason": "stop",
+   "passed": true,
+   "ran": 4,
+   "failed": 0,
+   "note": ""
+  },
+  {
+   "task": "dialogue_boat",
+   "sample": 0,
+   "category": "creative",
+   "level": null,
+   "finish_reason": "stop"
+  },
+  {
+   "task": "poem_server_room",
+   "sample": 0,
+   "category": "creative",
+   "level": null,
+   "finish_reason": "stop",
+   "lines": 14,
+   "constraints_ok": true
+  },
+  {
+   "task": "flash_lighthouse",
+   "sample": 0,
+   "category": "creative",
+   "level": null,
+   "finish_reason": "stop",
+   "words": 272,
+   "length_ok": true
+  },
+  {
+   "task": "rewrite_noir",
+   "sample": 0,
+   "category": "creative",
+   "level": null,
+   "finish_reason": "stop"
+  },
+  {
+   "task": "ol_council",
+   "sample": 0,
+   "category": "playground",
+   "level": null,
+   "finish_reason": "stop",
+   "valid_json": true
+  },
+  {
+   "task": "ol_huddle",
+   "sample": 0,
+   "category": "playground",
+   "level": null,
+   "finish_reason": "stop",
+   "valid_json": true
+  },
+  {
+   "task": "world_walking_city",
+   "sample": 0,
+   "category": "creative",
+   "level": null,
+   "finish_reason": "stop",
+   "words": 221,
+   "length_ok": true
+  },
+  {
+   "task": "ww_day_talk_wolf",
+   "sample": 0,
+   "category": "playground",
+   "level": null,
+   "finish_reason": "stop",
+   "valid_json": true
+  },
+  {
+   "task": "ww_vote",
+   "sample": 0,
+   "category": "playground",
+   "level": null,
+   "finish_reason": "stop",
+   "valid_json": true
+  },
+  {
+   "task": "ww_wolf_kill",
+   "sample": 0,
+   "category": "playground",
+   "level": null,
+   "finish_reason": "stop",
+   "valid_json": true
+  },
+  {
+   "task": "ol_journal",
+   "sample": 0,
+   "category": "playground",
+   "level": null,
+   "finish_reason": "stop",
+   "valid_json": true
+  },
+  {
+   "task": "correction_great_wall",
+   "sample": 0,
+   "category": "chat",
+   "level": null,
+   "finish_reason": "stop"
+  },
+  {
+   "task": "advice_sourdough",
+   "sample": 0,
+   "category": "chat",
+   "level": null,
+   "finish_reason": "stop"
+  },
+  {
+   "task": "email_decline_offer",
+   "sample": 0,
+   "category": "chat",
+   "level": null,
+   "finish_reason": "stop",
+   "words": 112,
+   "length_ok": true
+  },
+  {
+   "task": "fact_canberra",
+   "sample": 0,
+   "category": "chat",
+   "level": null,
+   "finish_reason": "stop"
+  },
+  {
+   "task": "fact_le_guin",
+   "sample": 0,
+   "category": "chat",
+   "level": null,
+   "finish_reason": "stop"
+  },
+  {
+   "task": "fact_tungsten",
+   "sample": 0,
+   "category": "chat",
+   "level": null,
+   "finish_reason": "stop"
+  },
+  {
+   "task": "explain_public_key",
+   "sample": 0,
+   "category": "chat",
+   "level": null,
+   "finish_reason": "stop",
+   "words": 157,
+   "length_ok": true
+  },
+  {
+   "task": "format_json_tips",
+   "sample": 0,
+   "category": "chat",
+   "level": null,
+   "finish_reason": "stop",
+   "json_only_5": true
+  },
+  {
+   "task": "multiturn_lisbon",
+   "sample": 0,
+   "category": "chat",
+   "level": null,
+   "finish_reason": "stop"
+  },
+  {
+   "task": "math_trains",
+   "sample": 0,
+   "category": "chat",
+   "level": null,
+   "finish_reason": "stop"
+  },
+  {
+   "task": "summarise_minutes",
+   "sample": 0,
+   "category": "chat",
+   "level": null,
+   "finish_reason": "stop",
+   "three_bullets": true
+  },
+  {
+   "task": "plan_couch_5k",
+   "sample": 0,
+   "category": "chat",
+   "level": null,
+   "finish_reason": "stop"
+  },
+  {
+   "task": "e_isbn10",
+   "sample": 1,
+   "category": "coding",
+   "level": "easy",
+   "finish_reason": "stop",
+   "passed": true,
+   "ran": 2,
+   "failed": 0,
+   "note": ""
+  },
+  {
+   "task": "e_merge_intervals",
+   "sample": 1,
+   "category": "coding",
+   "level": "easy",
+   "finish_reason": "stop",
+   "passed": true,
+   "ran": 3,
+   "failed": 0,
+   "note": ""
+  },
+  {
+   "task": "e_roman",
+   "sample": 1,
+   "category": "coding",
+   "level": "easy",
+   "finish_reason": "stop",
+   "passed": true,
+   "ran": 3,
+   "failed": 0,
+   "note": ""
+  },
+  {
+   "task": "e_top_words",
+   "sample": 1,
+   "category": "coding",
+   "level": "easy",
+   "finish_reason": "stop",
+   "passed": true,
+   "ran": 5,
+   "failed": 0,
+   "note": ""
+  },
+  {
+   "task": "h_cheapest_route",
+   "sample": 1,
+   "category": "coding",
+   "level": "hard",
+   "finish_reason": "stop",
+   "passed": true,
+   "ran": 5,
+   "failed": 0,
+   "note": ""
+  },
+  {
+   "task": "h_invoice_refactor",
+   "sample": 1,
+   "category": "coding",
+   "level": "hard",
+   "finish_reason": "stop",
+   "passed": false,
+   "ran": 4,
+   "failed": 1,
+   "note": "FAILED (failures=1)"
+  },
+  {
+   "task": "h_evaluate",
+   "sample": 1,
+   "category": "coding",
+   "level": "hard",
+   "finish_reason": "length",
+   "passed": false,
+   "ran": 0,
+   "failed": 0,
+   "note": "ImportError: cannot import name 'evaluate' from 'solution' (/tmp/eval-code-q6hou0gj/solution.py)"
+  },
+  {
+   "task": "h_ttl_cache",
+   "sample": 1,
+   "category": "coding",
+   "level": "hard",
+   "finish_reason": "stop",
+   "passed": false,
+   "ran": 11,
+   "failed": 1,
+   "note": "FAILED (failures=1)"
+  },
+  {
+   "task": "m_build_order",
+   "sample": 1,
+   "category": "coding",
+   "level": "medium",
+   "finish_reason": "stop",
+   "passed": true,
+   "ran": 4,
+   "failed": 0,
+   "note": ""
+  },
+  {
+   "task": "m_csv_line",
+   "sample": 1,
+   "category": "coding",
+   "level": "medium",
+   "finish_reason": "stop",
+   "passed": false,
+   "ran": 4,
+   "failed": 1,
+   "note": "FAILED (errors=1)"
+  },
+  {
+   "task": "m_parse_duration_fix",
+   "sample": 1,
+   "category": "coding",
+   "level": "medium",
+   "finish_reason": "stop",
+   "passed": false,
+   "ran": 2,
+   "failed": 1,
+   "note": "FAILED (errors=1)"
+  },
+  {
+   "task": "blurb_bike_lock",
+   "sample": 1,
+   "category": "creative",
+   "level": null,
+   "finish_reason": "stop",
+   "words": 71,
+   "length_ok": true,
+   "no_exclamation": true
+  },
+  {
+   "task": "m_ranges",
+   "sample": 1,
+   "category": "coding",
+   "level": "medium",
+   "finish_reason": "stop",
+   "passed": true,
+   "ran": 4,
+   "failed": 0,
+   "note": ""
+  },
+  {
+   "task": "dialogue_boat",
+   "sample": 1,
+   "category": "creative",
+   "level": null,
+   "finish_reason": "stop"
+  },
+  {
+   "task": "flash_lighthouse",
+   "sample": 1,
+   "category": "creative",
+   "level": null,
+   "finish_reason": "stop",
+   "words": 258,
+   "length_ok": true
+  },
+  {
+   "task": "poem_server_room",
+   "sample": 1,
+   "category": "creative",
+   "level": null,
+   "finish_reason": "stop",
+   "lines": 14,
+   "constraints_ok": true
+  },
+  {
+   "task": "rewrite_noir",
+   "sample": 1,
+   "category": "creative",
+   "level": null,
+   "finish_reason": "stop"
+  },
+  {
+   "task": "ol_council",
+   "sample": 1,
+   "category": "playground",
+   "level": null,
+   "finish_reason": "stop",
+   "valid_json": true
+  },
+  {
+   "task": "ol_huddle",
+   "sample": 1,
+   "category": "playground",
+   "level": null,
+   "finish_reason": "stop",
+   "valid_json": true
+  },
+  {
+   "task": "world_walking_city",
+   "sample": 1,
+   "category": "creative",
+   "level": null,
+   "finish_reason": "stop",
+   "words": 275,
+   "length_ok": true
+  },
+  {
+   "task": "ww_day_talk_wolf",
+   "sample": 1,
+   "category": "playground",
+   "level": null,
+   "finish_reason": "stop",
+   "valid_json": true
+  },
+  {
+   "task": "ol_journal",
+   "sample": 1,
+   "category": "playground",
+   "level": null,
+   "finish_reason": "stop",
+   "valid_json": true
+  },
+  {
+   "task": "ww_vote",
+   "sample": 1,
+   "category": "playground",
+   "level": null,
+   "finish_reason": "stop",
+   "valid_json": true
+  },
+  {
+   "task": "ww_wolf_kill",
+   "sample": 1,
+   "category": "playground",
+   "level": null,
+   "finish_reason": "stop",
+   "valid_json": true
+  },
+  {
+   "task": "correction_great_wall",
+   "sample": 1,
+   "category": "chat",
+   "level": null,
+   "finish_reason": "stop"
+  },
+  {
+   "task": "advice_sourdough",
+   "sample": 1,
+   "category": "chat",
+   "level": null,
+   "finish_reason": "stop"
+  },
+  {
+   "task": "email_decline_offer",
+   "sample": 1,
+   "category": "chat",
+   "level": null,
+   "finish_reason": "stop",
+   "words": 118,
+   "length_ok": true
+  },
+  {
+   "task": "fact_canberra",
+   "sample": 1,
+   "category": "chat",
+   "level": null,
+   "finish_reason": "stop"
+  },
+  {
+   "task": "fact_le_guin",
+   "sample": 1,
+   "category": "chat",
+   "level": null,
+   "finish_reason": "stop"
+  },
+  {
+   "task": "fact_tungsten",
+   "sample": 1,
+   "category": "chat",
+   "level": null,
+   "finish_reason": "stop"
+  },
+  {
+   "task": "explain_public_key",
+   "sample": 1,
+   "category": "chat",
+   "level": null,
+   "finish_reason": "stop",
+   "words": 157,
+   "length_ok": true
+  },
+  {
+   "task": "format_json_tips",
+   "sample": 1,
+   "category": "chat",
+   "level": null,
+   "finish_reason": "stop",
+   "json_only_5": true
+  },
+  {
+   "task": "multiturn_lisbon",
+   "sample": 1,
+   "category": "chat",
+   "level": null,
+   "finish_reason": "stop"
+  },
+  {
+   "task": "math_trains",
+   "sample": 1,
+   "category": "chat",
+   "level": null,
+   "finish_reason": "stop"
+  },
+  {
+   "task": "plan_couch_5k",
+   "sample": 1,
+   "category": "chat",
+   "level": null,
+   "finish_reason": "stop"
+  },
+  {
+   "task": "summarise_minutes",
+   "sample": 1,
+   "category": "chat",
+   "level": null,
+   "finish_reason": "stop",
+   "three_bullets": true
+  }
+ ],
  "qwen3.6-35b-a3b": [
   {
    "task": "e_merge_intervals",
@@ -1428,7 +2072,7 @@
    "passed": false,
    "ran": 0,
    "failed": 0,
-   "note": "ImportError: cannot import name 'parse_duration' from 'solution' (/tmp/eval-code-eq3lqg_5/solution.py)"
+   "note": "ImportError: cannot import name 'parse_duration' from 'solution' (/tmp/eval-code-9dy7aj0h/solution.py)"
   },
   {
    "task": "dialogue_boat",
