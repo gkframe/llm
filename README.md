@@ -132,10 +132,10 @@ automatic scores: `auto.json` there. Recorded model by model as each finishes.
 
 | | Gemma | Flint | Qwen3.6 Q4 | Qwen3.6 Q5 |
 | --- | --- | --- | --- | --- |
-| Coding, unit tests passed (easy / medium / hard, of 8 each) | 8 / 8 / 8 | running | to run | to run |
-| Playground replies, valid JSON | 12 of 12 | | | |
-| Answers cut off by `max_tokens` (16384) | 1 of 72 | | | |
-| Time for the 72 tasks, two at a time | 2 h 06 min | | | |
+| Coding, unit tests passed (easy / medium / hard, of 8 each) | 8 / 8 / 8 | 8 / 8 / 6 | running | to run |
+| Playground replies, valid JSON | 12 of 12 | 11 of 12 | | |
+| Answers cut off by `max_tokens` (16384; 2048 in the playground) | 1 of 72 | 2 of 72 | | |
+| Time for the 72 tasks, two at a time | 2 h 06 min | 1 h 27 min | | |
 
 **Gemma** (16:01–18:07):
 - **Coding.** It passed every test, including the hard tasks: a TTL cache, an expression
@@ -148,6 +148,18 @@ automatic scores: `auto.json` there. Recorded model by model as each finishes.
   counting words one per line, draft after draft. Sample 1 used all 16,384 tokens without
   answering. Sample 0 gave a good 67-word blurb, but only after 14,000 tokens
   (13.5 minutes). With thinking on, a word-count constraint can trap it.
+
+**Flint** (18:56–20:23):
+- **Coding.** It passed every easy and medium test, and 6 of 8 hard ones. One
+  cheapest-route answer spent all 16,384 tokens checking its own reasoning and never wrote
+  the code. One TTL-cache answer used `time` without importing it. It is the quickest of the
+  three so far: a median of 1 minute per easy task, 3.5 per medium, 9.5 per hard.
+- **Facts and reasoning.** The fact questions and the two-trains problem were right in both
+  samples, and every formatting check passed.
+- **One playground reply was broken.** In one of the two Outlast journal samples it started
+  reasoning inside the journal text ("Cole voted for Dev on day 1? No, …") and ran on until
+  the 2,048-token limit, so the JSON was never closed. With thinking turned off, its thinking
+  can leak into the answer. The playground would have dropped that turn.
 
 ### Adding or changing a model
 

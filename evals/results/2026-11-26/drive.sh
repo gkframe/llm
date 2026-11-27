@@ -7,6 +7,7 @@ CTL=127.0.0.1:8701/api/games
 game() { curl -s 127.0.0.1:8701/api/state | python3 -c "import json,sys; print(json.load(sys.stdin).get('active') or '')"; }
 control() { g=$(game); [ -n "$g" ] && curl -s -X POST $CTL/$g/control -H 'Content-Type: application/json' -d "{\"action\":\"$1\"}"; echo; }
 idle() {
+  local i m b busy
   for i in $(seq 1 120); do
     busy=0
     for m in $(curl -s 127.0.0.1:8741/models | python3 -c "import json,sys; print(' '.join(m['id'] for m in json.load(sys.stdin)['data'] if m['status']['value']!='unloaded'))"); do

@@ -1,4 +1,648 @@
 {
+ "flint-40b-a2.5b": [
+  {
+   "task": "e_merge_intervals",
+   "sample": 0,
+   "category": "coding",
+   "level": "easy",
+   "finish_reason": "stop",
+   "passed": true,
+   "ran": 3,
+   "failed": 0,
+   "note": ""
+  },
+  {
+   "task": "e_roman",
+   "sample": 0,
+   "category": "coding",
+   "level": "easy",
+   "finish_reason": "stop",
+   "passed": true,
+   "ran": 3,
+   "failed": 0,
+   "note": ""
+  },
+  {
+   "task": "e_isbn10",
+   "sample": 0,
+   "category": "coding",
+   "level": "easy",
+   "finish_reason": "stop",
+   "passed": true,
+   "ran": 2,
+   "failed": 0,
+   "note": ""
+  },
+  {
+   "task": "e_top_words",
+   "sample": 0,
+   "category": "coding",
+   "level": "easy",
+   "finish_reason": "stop",
+   "passed": true,
+   "ran": 5,
+   "failed": 0,
+   "note": ""
+  },
+  {
+   "task": "h_cheapest_route",
+   "sample": 0,
+   "category": "coding",
+   "level": "hard",
+   "finish_reason": "length",
+   "passed": false,
+   "ran": 0,
+   "failed": 0,
+   "note": "ImportError: cannot import name 'cheapest_route' from 'solution' (/tmp/eval-code-0nfjc9kj/solution.py)"
+  },
+  {
+   "task": "h_evaluate",
+   "sample": 0,
+   "category": "coding",
+   "level": "hard",
+   "finish_reason": "stop",
+   "passed": true,
+   "ran": 5,
+   "failed": 0,
+   "note": ""
+  },
+  {
+   "task": "h_invoice_refactor",
+   "sample": 0,
+   "category": "coding",
+   "level": "hard",
+   "finish_reason": "stop",
+   "passed": true,
+   "ran": 4,
+   "failed": 0,
+   "note": ""
+  },
+  {
+   "task": "h_ttl_cache",
+   "sample": 0,
+   "category": "coding",
+   "level": "hard",
+   "finish_reason": "stop",
+   "passed": true,
+   "ran": 11,
+   "failed": 0,
+   "note": ""
+  },
+  {
+   "task": "m_build_order",
+   "sample": 0,
+   "category": "coding",
+   "level": "medium",
+   "finish_reason": "stop",
+   "passed": true,
+   "ran": 4,
+   "failed": 0,
+   "note": ""
+  },
+  {
+   "task": "m_csv_line",
+   "sample": 0,
+   "category": "coding",
+   "level": "medium",
+   "finish_reason": "stop",
+   "passed": true,
+   "ran": 4,
+   "failed": 0,
+   "note": ""
+  },
+  {
+   "task": "m_parse_duration_fix",
+   "sample": 0,
+   "category": "coding",
+   "level": "medium",
+   "finish_reason": "stop",
+   "passed": true,
+   "ran": 2,
+   "failed": 0,
+   "note": ""
+  },
+  {
+   "task": "blurb_bike_lock",
+   "sample": 0,
+   "category": "creative",
+   "level": null,
+   "finish_reason": "stop",
+   "words": 67,
+   "length_ok": true,
+   "no_exclamation": true
+  },
+  {
+   "task": "m_ranges",
+   "sample": 0,
+   "category": "coding",
+   "level": "medium",
+   "finish_reason": "stop",
+   "passed": true,
+   "ran": 4,
+   "failed": 0,
+   "note": ""
+  },
+  {
+   "task": "flash_lighthouse",
+   "sample": 0,
+   "category": "creative",
+   "level": null,
+   "finish_reason": "stop",
+   "words": 254,
+   "length_ok": true
+  },
+  {
+   "task": "dialogue_boat",
+   "sample": 0,
+   "category": "creative",
+   "level": null,
+   "finish_reason": "stop"
+  },
+  {
+   "task": "poem_server_room",
+   "sample": 0,
+   "category": "creative",
+   "level": null,
+   "finish_reason": "stop",
+   "lines": 14,
+   "constraints_ok": true
+  },
+  {
+   "task": "rewrite_noir",
+   "sample": 0,
+   "category": "creative",
+   "level": null,
+   "finish_reason": "stop"
+  },
+  {
+   "task": "ol_council",
+   "sample": 0,
+   "category": "playground",
+   "level": null,
+   "finish_reason": "stop",
+   "valid_json": true
+  },
+  {
+   "task": "ol_huddle",
+   "sample": 0,
+   "category": "playground",
+   "level": null,
+   "finish_reason": "stop",
+   "valid_json": true
+  },
+  {
+   "task": "world_walking_city",
+   "sample": 0,
+   "category": "creative",
+   "level": null,
+   "finish_reason": "stop",
+   "words": 152,
+   "length_ok": true
+  },
+  {
+   "task": "ww_day_talk_wolf",
+   "sample": 0,
+   "category": "playground",
+   "level": null,
+   "finish_reason": "stop",
+   "valid_json": true
+  },
+  {
+   "task": "ww_vote",
+   "sample": 0,
+   "category": "playground",
+   "level": null,
+   "finish_reason": "stop",
+   "valid_json": true
+  },
+  {
+   "task": "ww_wolf_kill",
+   "sample": 0,
+   "category": "playground",
+   "level": null,
+   "finish_reason": "stop",
+   "valid_json": true
+  },
+  {
+   "task": "ol_journal",
+   "sample": 0,
+   "category": "playground",
+   "level": null,
+   "finish_reason": "stop",
+   "valid_json": true
+  },
+  {
+   "task": "correction_great_wall",
+   "sample": 0,
+   "category": "chat",
+   "level": null,
+   "finish_reason": "stop"
+  },
+  {
+   "task": "email_decline_offer",
+   "sample": 0,
+   "category": "chat",
+   "level": null,
+   "finish_reason": "stop",
+   "words": 79,
+   "length_ok": true
+  },
+  {
+   "task": "explain_public_key",
+   "sample": 0,
+   "category": "chat",
+   "level": null,
+   "finish_reason": "stop",
+   "words": 159,
+   "length_ok": true
+  },
+  {
+   "task": "fact_canberra",
+   "sample": 0,
+   "category": "chat",
+   "level": null,
+   "finish_reason": "stop"
+  },
+  {
+   "task": "fact_le_guin",
+   "sample": 0,
+   "category": "chat",
+   "level": null,
+   "finish_reason": "stop"
+  },
+  {
+   "task": "fact_tungsten",
+   "sample": 0,
+   "category": "chat",
+   "level": null,
+   "finish_reason": "stop"
+  },
+  {
+   "task": "advice_sourdough",
+   "sample": 0,
+   "category": "chat",
+   "level": null,
+   "finish_reason": "stop"
+  },
+  {
+   "task": "format_json_tips",
+   "sample": 0,
+   "category": "chat",
+   "level": null,
+   "finish_reason": "stop",
+   "json_only_5": true
+  },
+  {
+   "task": "math_trains",
+   "sample": 0,
+   "category": "chat",
+   "level": null,
+   "finish_reason": "stop"
+  },
+  {
+   "task": "multiturn_lisbon",
+   "sample": 0,
+   "category": "chat",
+   "level": null,
+   "finish_reason": "stop"
+  },
+  {
+   "task": "plan_couch_5k",
+   "sample": 0,
+   "category": "chat",
+   "level": null,
+   "finish_reason": "stop"
+  },
+  {
+   "task": "summarise_minutes",
+   "sample": 0,
+   "category": "chat",
+   "level": null,
+   "finish_reason": "stop",
+   "three_bullets": true
+  },
+  {
+   "task": "e_merge_intervals",
+   "sample": 1,
+   "category": "coding",
+   "level": "easy",
+   "finish_reason": "stop",
+   "passed": true,
+   "ran": 3,
+   "failed": 0,
+   "note": ""
+  },
+  {
+   "task": "e_roman",
+   "sample": 1,
+   "category": "coding",
+   "level": "easy",
+   "finish_reason": "stop",
+   "passed": true,
+   "ran": 3,
+   "failed": 0,
+   "note": ""
+  },
+  {
+   "task": "e_isbn10",
+   "sample": 1,
+   "category": "coding",
+   "level": "easy",
+   "finish_reason": "stop",
+   "passed": true,
+   "ran": 2,
+   "failed": 0,
+   "note": ""
+  },
+  {
+   "task": "e_top_words",
+   "sample": 1,
+   "category": "coding",
+   "level": "easy",
+   "finish_reason": "stop",
+   "passed": true,
+   "ran": 5,
+   "failed": 0,
+   "note": ""
+  },
+  {
+   "task": "h_cheapest_route",
+   "sample": 1,
+   "category": "coding",
+   "level": "hard",
+   "finish_reason": "stop",
+   "passed": true,
+   "ran": 5,
+   "failed": 0,
+   "note": ""
+  },
+  {
+   "task": "h_invoice_refactor",
+   "sample": 1,
+   "category": "coding",
+   "level": "hard",
+   "finish_reason": "stop",
+   "passed": true,
+   "ran": 4,
+   "failed": 0,
+   "note": ""
+  },
+  {
+   "task": "h_evaluate",
+   "sample": 1,
+   "category": "coding",
+   "level": "hard",
+   "finish_reason": "stop",
+   "passed": true,
+   "ran": 5,
+   "failed": 0,
+   "note": ""
+  },
+  {
+   "task": "m_build_order",
+   "sample": 1,
+   "category": "coding",
+   "level": "medium",
+   "finish_reason": "stop",
+   "passed": true,
+   "ran": 4,
+   "failed": 0,
+   "note": ""
+  },
+  {
+   "task": "m_csv_line",
+   "sample": 1,
+   "category": "coding",
+   "level": "medium",
+   "finish_reason": "stop",
+   "passed": true,
+   "ran": 4,
+   "failed": 0,
+   "note": ""
+  },
+  {
+   "task": "h_ttl_cache",
+   "sample": 1,
+   "category": "coding",
+   "level": "hard",
+   "finish_reason": "stop",
+   "passed": false,
+   "ran": 0,
+   "failed": 0,
+   "note": "NameError: name 'time' is not defined. Did you forget to import 'time'?"
+  },
+  {
+   "task": "m_parse_duration_fix",
+   "sample": 1,
+   "category": "coding",
+   "level": "medium",
+   "finish_reason": "stop",
+   "passed": true,
+   "ran": 2,
+   "failed": 0,
+   "note": ""
+  },
+  {
+   "task": "blurb_bike_lock",
+   "sample": 1,
+   "category": "creative",
+   "level": null,
+   "finish_reason": "stop",
+   "words": 60,
+   "length_ok": true,
+   "no_exclamation": true
+  },
+  {
+   "task": "m_ranges",
+   "sample": 1,
+   "category": "coding",
+   "level": "medium",
+   "finish_reason": "stop",
+   "passed": true,
+   "ran": 4,
+   "failed": 0,
+   "note": ""
+  },
+  {
+   "task": "dialogue_boat",
+   "sample": 1,
+   "category": "creative",
+   "level": null,
+   "finish_reason": "stop"
+  },
+  {
+   "task": "flash_lighthouse",
+   "sample": 1,
+   "category": "creative",
+   "level": null,
+   "finish_reason": "stop",
+   "words": 268,
+   "length_ok": true
+  },
+  {
+   "task": "poem_server_room",
+   "sample": 1,
+   "category": "creative",
+   "level": null,
+   "finish_reason": "stop",
+   "lines": 14,
+   "constraints_ok": true
+  },
+  {
+   "task": "rewrite_noir",
+   "sample": 1,
+   "category": "creative",
+   "level": null,
+   "finish_reason": "stop"
+  },
+  {
+   "task": "ol_council",
+   "sample": 1,
+   "category": "playground",
+   "level": null,
+   "finish_reason": "stop",
+   "valid_json": true
+  },
+  {
+   "task": "ol_huddle",
+   "sample": 1,
+   "category": "playground",
+   "level": null,
+   "finish_reason": "stop",
+   "valid_json": true
+  },
+  {
+   "task": "world_walking_city",
+   "sample": 1,
+   "category": "creative",
+   "level": null,
+   "finish_reason": "stop",
+   "words": 186,
+   "length_ok": true
+  },
+  {
+   "task": "ww_day_talk_wolf",
+   "sample": 1,
+   "category": "playground",
+   "level": null,
+   "finish_reason": "stop",
+   "valid_json": true
+  },
+  {
+   "task": "ww_vote",
+   "sample": 1,
+   "category": "playground",
+   "level": null,
+   "finish_reason": "stop",
+   "valid_json": true
+  },
+  {
+   "task": "ww_wolf_kill",
+   "sample": 1,
+   "category": "playground",
+   "level": null,
+   "finish_reason": "stop",
+   "valid_json": true
+  },
+  {
+   "task": "ol_journal",
+   "sample": 1,
+   "category": "playground",
+   "level": null,
+   "finish_reason": "length",
+   "valid_json": false
+  },
+  {
+   "task": "correction_great_wall",
+   "sample": 1,
+   "category": "chat",
+   "level": null,
+   "finish_reason": "stop"
+  },
+  {
+   "task": "advice_sourdough",
+   "sample": 1,
+   "category": "chat",
+   "level": null,
+   "finish_reason": "stop"
+  },
+  {
+   "task": "email_decline_offer",
+   "sample": 1,
+   "category": "chat",
+   "level": null,
+   "finish_reason": "stop",
+   "words": 103,
+   "length_ok": true
+  },
+  {
+   "task": "explain_public_key",
+   "sample": 1,
+   "category": "chat",
+   "level": null,
+   "finish_reason": "stop",
+   "words": 119,
+   "length_ok": true
+  },
+  {
+   "task": "fact_le_guin",
+   "sample": 1,
+   "category": "chat",
+   "level": null,
+   "finish_reason": "stop"
+  },
+  {
+   "task": "fact_canberra",
+   "sample": 1,
+   "category": "chat",
+   "level": null,
+   "finish_reason": "stop"
+  },
+  {
+   "task": "format_json_tips",
+   "sample": 1,
+   "category": "chat",
+   "level": null,
+   "finish_reason": "stop",
+   "json_only_5": true
+  },
+  {
+   "task": "fact_tungsten",
+   "sample": 1,
+   "category": "chat",
+   "level": null,
+   "finish_reason": "stop"
+  },
+  {
+   "task": "math_trains",
+   "sample": 1,
+   "category": "chat",
+   "level": null,
+   "finish_reason": "stop"
+  },
+  {
+   "task": "multiturn_lisbon",
+   "sample": 1,
+   "category": "chat",
+   "level": null,
+   "finish_reason": "stop"
+  },
+  {
+   "task": "summarise_minutes",
+   "sample": 1,
+   "category": "chat",
+   "level": null,
+   "finish_reason": "stop",
+   "three_bullets": true
+  },
+  {
+   "task": "plan_couch_5k",
+   "sample": 1,
+   "category": "chat",
+   "level": null,
+   "finish_reason": "stop"
+  }
+ ],
  "gemma-4-26b-a4b": [
   {
    "task": "e_merge_intervals",
