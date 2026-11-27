@@ -132,10 +132,10 @@ automatic scores: `auto.json` there. Recorded model by model as each finishes.
 
 | | Gemma | Flint | Qwen3.6 Q4 | Qwen3.6 Q5 |
 | --- | --- | --- | --- | --- |
-| Coding, unit tests passed (easy / medium / hard, of 8 each) | 8 / 8 / 8 | 8 / 8 / 6 | running | to run |
-| Playground replies, valid JSON | 12 of 12 | 11 of 12 | | |
-| Answers cut off by `max_tokens` (16384; 2048 in the playground) | 1 of 72 | 2 of 72 | | |
-| Time for the 72 tasks, two at a time | 2 h 06 min | 1 h 27 min | | |
+| Coding, unit tests passed (easy / medium / hard, of 8 each) | 8 / 8 / 8 | 8 / 8 / 6 | 8 / 5 / 5 | running |
+| Playground replies, valid JSON | 12 of 12 | 11 of 12 | 12 of 12 | |
+| Answers cut off by `max_tokens` (16384; 2048 in the playground) | 1 of 72 | 2 of 72 | 2 of 72 | |
+| Time for the 72 tasks, two at a time | 2 h 06 min | 1 h 27 min | 2 h 39 min | |
 
 **Gemma** (16:01–18:07):
 - **Coding.** It passed every test, including the hard tasks: a TTL cache, an expression
@@ -160,6 +160,17 @@ automatic scores: `auto.json` there. Recorded model by model as each finishes.
   reasoning inside the journal text ("Cole voted for Dev on day 1? No, …") and ran on until
   the 2,048-token limit, so the JSON was never closed. With thinking turned off, its thinking
   can leak into the answer. The playground would have dropped that turn.
+
+**Qwen3.6 Q4** (20:43–23:22):
+- **Coding.** It passed every easy test but only 5 of 8 medium and 5 of 8 hard, the weakest
+  so far. Two answers spent all 16,384 tokens thinking and never wrote working code (the
+  expression evaluator; the parse-duration fix). The other four were real bugs: a CSV parser
+  that mishandles empty fields, a range expander that rejects valid input, a route search
+  that returned a 700 route over the 600 one, and a cache that compared a list with a float.
+  It also thinks the longest: a median of 4.5 minutes per easy task (Flint: 1), 9 per medium,
+  10 per hard.
+- **Facts and reasoning.** The fact questions and the two-trains problem were right in both
+  samples, and every formatting check and all 12 playground replies passed.
 
 ### Adding or changing a model
 
